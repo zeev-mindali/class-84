@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CV</title>
+  </head>
+  <body dir="rtl">
+    <form>
+      <fieldset>
+        <legend>פרטים אישיים</legend>
+        <input type="text" name="fName" placeholder="שם פרטי" /><br /><br />
+        <input type="text" name="lName" placeholder="שם משפחה" /><br /><br />
+        <input type="tel" name="tel" placeholder="טלפון" /><br /><br />
+        <input type="date" name="bd" /><br />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>קצת עליי</legend>
+        <textarea
+          rows="6"
+          cols="50"
+          name="aboutMe"
+          placeholder="ספר על מקומות עבודה אחרים, ולמה שבכלל נקח אותך"
+        ></textarea>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>העדפות משכורת ושכר</legend>
+        <fieldset>
+          <legend>אזורים לעבודה</legend>
+          <input type="checkbox" name="north" />צפון
+          <input type="checkbox" name="center" />מרכז
+          <input type="checkbox" name="south" />דרום
+          <input type="checkbox" name="eilat" />אילת
+          <input type="checkbox" name="iWish" />חו"ל (ווגאס)
+        </fieldset>
+
+        <fieldset>
+          <legend>סוג משרה</legend>
+          <input type="checkbox" name="fs" />fullStack
+          <input type="checkbox" name="fe" />front end
+          <input type="checkbox" name="be" />back end
+          <input type="checkbox" name="qa" />QA
+          <input type="checkbox" name="poor" />מוכן לשטוף גם רצפה, רק תקחו אותי
+        </fieldset>
+
+        <fieldset>
+          <legend>משכורת</legend>
+          <input type="radio" name="salary" value="10k" />10,000-15,000
+          <input type="radio" name="salary" value="15k" />15,000-20,000
+          <input type="radio" name="salary" value="20k" />20,000-25,000
+          <input type="radio" name="salary" value="25k" />25,000-30,000
+          <input type="radio" name="salary" value="tesla" />איילון מסק
+        </fieldset>
+      </fieldset>
+
+      <br />
+      <fieldset>
+        <legend>קורות חיים</legend>
+        <input type="file" />
+      </fieldset>
+      <br />
+      <input type="submit" value="שלח" />
+      <input type="reset" value="אפס" />
+    </form>
+  </body>
+</html>
