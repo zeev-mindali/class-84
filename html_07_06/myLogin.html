@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Login</title>
+  </head>
+  <body>
+    <center>
+      <h1>Login System</h1>
+      <hr />
+      <!-- הצהרה על טופס-->
+      <form action="" method="post" enctype="text/plain">
+        <!-- קליטה גלוייה מהמשתמש-->
+        <input
+          name="userName"
+          type="text"
+          placeholder="Enter user name..."
+          maxlength="10"
+        />
+        <br /><br />
+        <!-- קליטה סמוייה מהמשתמש-->
+        <input
+          name="userPass"
+          type="password"
+          placeholder="Enter user password..."
+        />
+        <!-- place holder - מראה מה כותבים נמחק בעת כתיבה-->
+        <br /><br />
+        <input name="empId" type="text" value="5529" disabled /><br /><br />
+        <!-- שדה מוסתר-->
+        <input type="hidden" value="192.168.2.1" readonly /><br /><br />
+        <!-- כתיבת טקסט ארוכה-->
+        <textarea rows="3" cols="20"></textarea><br /><br />
+        <fieldset>
+          <legend>מה היא מבקשת</legend>
+          <input type="checkbox" name="marry" checked disabled />Merry Me<br /><br />
+          <input type="checkbox" name="clean" />לנקות את הבית<br />
+          <input type="checkbox" name="shopping" />לעשות קניות<br />
+          <input type="checkbox" name="coocking" />לבשל לשבת<br /><br />
+        </fieldset>
+        <!--action שליחת הנתונים , הפעלת -->
+        <fieldset>
+          <legend>מה אני רוצה</legend>
+          <input type="radio" name="doing" value="home" checked />stay home
+          <input type="radio" name="doing" value="work" />work at home
+          <input type="radio" name="doing" value="friends" />go to firends
+          <input type="radio" name="doing" value="parents" />go to parents<br /><br />
+        </fieldset>
+        <fieldset>
+          <legend>מי מנקה את הבית היום</legend>
+          <select>
+            <option>זאב</option>
+            <option>אמיטל</option>
+            <option>המנקה</option>
+            <option>המנקה</option>
+            <option>המנקה</option>
+            <option>המנקה</option>
+            <option>המנקה</option>
+            <option>המנקה</option>
+          </select>
+          <br /><br />
+          טען קובץ קורות חיים<br />
+          <input type="file" /><br /><br />
+          <input type="color" /><br /><br />
+        </fieldset>
+        <input type="submit" value="login" />
+        <!-- איפוס הנתונים -->
+        <input type="reset" value="reset" />
+        <hr />
+        <!-- button>Press Me</button -->
+      </form>
+    </center>
+  </body>
+</html>
