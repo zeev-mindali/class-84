@@ -1,0 +1,57 @@
+body{
+    background-color: purple;
+    color: white;
+}
+
+div,p{
+    background-color: black;
+    color: white;
+}
+
+p::first-letter{
+    font-size: 50px;
+    font-style: italic;
+}
+p::first-line{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+
+/* this is a class */
+.class84{
+    background-color: orange;
+    color: purple;
+}
+/* this is maor button, do not touch !!!!*/
+/* this is an id */
+#idCSS{
+    background-color: red;
+    color: blue;
+}
+
+table{
+   width:250px;
+    background-color: blue;
+    color:white;
+}
+ul>li{
+    color:red;
+}
+li>a{
+    color:green;
+}
+
+a:link{
+    color: white;
+}
+
+a:hover{
+    color:red;
+    font-size: 70px;
+}
+
+input[type="text"],input[type="password"]{
+    background-color: yellow;
+}
