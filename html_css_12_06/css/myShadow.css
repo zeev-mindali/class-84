@@ -1,0 +1,27 @@
+div{
+    height: 10vh;
+    margin: 3vh 10%;
+    background:green;
+}
+div:first-child{
+    box-shadow: 0 5px 15px -2px black;
+}
+div:nth-child(2){
+    box-shadow: -6px -3px 10px 10px black;
+}
+div:nth-child(3){
+    box-shadow: 0 0 10px 3px red;
+}
+
+div:nth-child(4){
+    box-shadow: inset 0 0 20px 13px yellow;
+}
+
+.ironBall{
+    margin:0px;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background: green;
+    box-shadow: inset -10px -10px 150px 50px black;
+}
