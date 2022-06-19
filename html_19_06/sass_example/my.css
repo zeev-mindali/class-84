@@ -1,0 +1,13 @@
+body {
+  font-family: Helvetica, sans-serif; /* Helvetica, sans-serif */
+  font-size: 18px; /* 18px */
+  color: red; /* red */
+  background-color: #009fff;
+}
+
+#container {
+  width: 680px; /* 680px */
+  background-color: #009fff;
+}
+
+/*# sourceMappingURL=my.css.map */

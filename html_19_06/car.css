@@ -23,11 +23,95 @@ body {
   grid-column: span 6;
 }
 
+.roundBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
 .layout > main {
   grid-column: span 5;
+  padding: 20px;
 }
 
 .layout,
 .layout > * {
   border: 1px solid white;
+}
+
+#box1 {
+  border-radius: 25px;
+  background: #73ad21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#box2 {
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#box3 {
+  border-radius: 25px;
+  background: url(img/paper.jpg);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  color: black;
+}
+
+#box1img {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(img/border.png) 30 round;
+}
+#box2img {
+  border: 30px solid transparent;
+  padding: 15px;
+  border-image: url(img/border.png) 30;
+}
+
+/* animations */
+@keyframes zeev {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+
+@keyframes zeev2 {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  /*
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: blue;
+  }
+  */
+}
+#box3img {
+  border-radius: 25px;
+  background: red;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  animation-name: zeev2;
+  animation-duration: 1s;
+  /*animation-iteration-count: 5;*/
+  animation-iteration-count: infinite;
 }
