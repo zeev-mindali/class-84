@@ -1,0 +1,33 @@
+/* הגדרות מסך ראשי */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+  font-style: italic;
+  color: wheat;
+  background-image: linear-gradient(-45deg, purple, rgb(25, 4, 66));
+}
+
+.layout {
+  height: 100%;
+  /* lets use gird :) */
+  box-sizing: border-box; /* fix css size bug/feature....  */
+  display: grid;
+  grid-template-rows: 15% 80% 5%;
+  grid-template-columns: repeat(6, 1fr);
+}
+.layout > header,
+.layout > footer {
+  grid-column: span 6;
+}
+
+.layout > main {
+  grid-column: span 5;
+}
+
+.layout,
+.layout > * {
+  border: 1px solid white;
+}

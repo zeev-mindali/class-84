@@ -1,0 +1,49 @@
+body {
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+img {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: 20%;
+  left: 35%;
+  right: 35%;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 38px;
+  color: red;
+}
+.topLeft {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  font-size: 38px;
+  color: red;
+}
+.topRight {
+  position: absolute;
+  top: 20%;
+  right: 35%;
+  font-size: 38px;
+  color: red;
+}
+.bottomLeft {
+  position: absolute;
+  bottom: 20%;
+  left: 35%;
+  font-size: 38px;
+  color: red;
+}
+.bottomRight {
+  position: absolute;
+  bottom: 20%;
+  right: 35%;
+  font-size: 38px;
+  color: red;
+}

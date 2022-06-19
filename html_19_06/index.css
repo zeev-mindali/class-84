@@ -1,0 +1,35 @@
+kbd {
+  background-color: black;
+  color: green;
+}
+.static {
+  position: static;
+  border: 3px solid #73ad21;
+}
+.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73ad21;
+}
+.fixed {
+  position: fixed;
+  top: 80px;
+  left: 25px;
+  width: 300px;
+  border: 3px solid #73ad21;
+}
+.absolute {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73ad21;
+}
+.sticky {
+  position: sticky;
+  position: -webkit-sticky; /* safari */
+  top: 0;
+  background-color: green;
+  border: 2px solid #4caf50;
+}
