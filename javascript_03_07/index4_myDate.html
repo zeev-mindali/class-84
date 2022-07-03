@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Date</title>
+  </head>
+  <body>
+    <script>
+      var date = new Date();
+      console.log(date.getDate());
+      console.log(date.toLocaleDateString());
+      console.log(
+        date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
+      );
+      console.log(parseInt(Math.random() * 50 - 25));
+
+      var myName = prompt("enter your name");
+      console.log("your name is: " + myName);
+    </script>
+  </body>
+</html>
