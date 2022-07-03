@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        //string , number, boolean , object , undefined
+      //קבלת קלט מהמשתמש
+      var sentence = prompt("Enter a line from a song"); //גנן גידל דגן בגן
+      //איתחול משתנה ריק מסוג מחרוזת
+      var result = "";
+      //פירוק המחרוזת המקורית לפי תו ספציפי, במקרה שלו רווח
+      var revMe = sentence.split(" ");
+      //revMe[0]="גנן"
+      //revMe[1]="גידל"
+      //revMe[2]="דגן"
+      //revMe[3]="בגן"
+
+      //ביצוע איטרציה הפוכה , כלומר מהסוף להתחלה, והוספת כל מילה במערך למשתנה עם רווח
+      for (var counter = revMe.length - 1; counter >= 0; counter -= 1) {
+        result += revMe[counter] + " ";
+      }
+      //הדפסת התוצאה לקונוסול
+      console.log(result);
+      //הדפסת התוצאה למסך
+      document.write(result);
+    </script>
+  </body>
+</html>
