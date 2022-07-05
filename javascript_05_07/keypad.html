@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keypad</title>
+  </head>
+  <body>
+    <center>
+      <input type="button" value="1" onclick="numberClick('1')" />
+      <input type="button" value="2" onclick="numberClick('2')" />
+      <input type="button" value="3" onclick="numberClick('3')" />
+      <br /><br />
+      <input type="button" value="4" onclick="numberClick('4')" />
+      <input type="button" value="5" onclick="numberClick('5')" />
+      <input type="button" value="6" onclick="numberClick('6')" />
+      <br /><br />
+      <input type="button" value="7" onclick="numberClick('7')" />
+      <input type="button" value="8" onclick="numberClick('8')" />
+      <input type="button" value="9" onclick="numberClick('9')" />
+      <br /><br />
+      <input type="button" value="C" onclick="clearMe()" />
+      <input type="button" value="0" onclick="numberClick('0')" />
+      <input type="button" value="#" onclick=" checkNumber()" />
+      <br />
+    </center>
+    <script>
+        //איפוס המשתנה המחזיק את הקוד
+      var myCode = "";
+
+      //פונקציה לטיפול בעת לחיצה על כפתור שמקבל מספר במחרוזת
+      function numberClick(codeNumber) {
+        //הוספת המספר שהתקבל אל הקוד
+        myCode += codeNumber;
+        //הדפסת הקוד הנוכחי (כי אני אף פעם לא בטוח במה שאני עושה)
+        console.log(myCode);
+      }
+
+      //פונקציה לבדיקת הקוד
+      function checkNumber() {
+        //במידה והקוד הוא 2580 תפתח את הדלת, אחרת תציג הודעה בקונוסל
+        if (myCode == "2580") {
+          alert("you opened the door !!!");
+        } else {
+          console.log("Why who are you???");
+        }
+        //איפוס הקוד לצורך קבלת קוד חדש
+        myCode = "";
+      }
+      function clearMe() {
+        //הודעה למשתמש שאני מוחק את הקוד
+        console.log("cleared the code");
+        //קבלת הקוד למעט האיבר האחרון, בכך מוחקים את הסיפרה האחרונה
+        myCode = myCode.substring(0, myCode.length - 1);
+        //הדפסה של הקוד מחדש - כי אני לא מאמין בעצמי
+        console.log(myCode);
+      }
+    </script>
+  </body>
+</html>

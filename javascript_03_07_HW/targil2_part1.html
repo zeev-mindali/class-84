@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Targil 2 part 1</title>
+  </head>
+  <body>
+    <script>
+      // קליטת השם עם השם הפנימי
+      var getWord = prompt("in your mother in law, write a word");
+      // קליטת האינדקס של האות הראשונה והפיכה למספר => 3
+      var getIndex = Number(prompt("enter the inner word position"));
+      // קליטת אורך המילה והפיכה למספר=> 4
+      var getLength = Number(prompt("enter the length of the word"));
+      //minzeevdali => zeev         3        (3+4=7)
+      var theWord = getWord.substring(getIndex, getIndex + getLength);
+      alert("and the word is :" + theWord);
+    </script>
+  </body>
+</html>
