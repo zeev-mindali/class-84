@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מערכת התחברות למשרד הביטחון</title>
+  </head>
+  <body>
+    <div style="direction: rtl">
+      <center>
+        <img src="img/logo.png" /><br />
+        <h1>כניסת מורשים לאתר משרד הביטחון</h1>
+        <br />
+        <small>כי אנחנו יודעים לשמור על הסודות שלנו</small>
+        <hr />
+
+        <form>
+          <fieldset>
+            <input
+              type="text"
+              name="uName"
+              id="userName"
+              placeholder="שם משתמש בטח ADMIN"
+            /><br /><br />
+            <input
+              type="password"
+              name="uPass"
+              id="userPassword"
+              placeholder="סיסמא בטח 1234"
+            /><br /><br />
+          </fieldset>
+          <input
+            type="button"
+            value="כניסה למערכת"
+            style="background-color: #009fff; color: red"
+            onclick="checkUser()"
+          />
+        </form>
+      </center>
+    </div>
+    <script>
+      var formUser = document.getElementById("userName");
+      var formPass = document.getElementById("userPassword");
+
+      function checkUser() {
+        //console.log(formUser.value + " " + formPass.value);
+        if (formUser.value == "admin" && formPass.value == "1234") {
+          window.location = "https://www.mod.gov.il/Pages/default.aspx";
+        } else {
+          window.location = "https://col.org.il/";
+        }
+      }
+    </script>
+  </body>
+</html>

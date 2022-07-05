@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oui shit</title>
+  </head>
+  <body>
+    <center>
+      <h1>משחק חדש</h1>
+      <hr />
+      <input type="text" id="userGuess" name="guess" />
+      <input type="button" value="שלח ניחוש" onclick="checkMe()" />
+      <br /><br /><br />
+      <div id="res"></div>
+    </center>
+    <script>
+      var names = ["vova", "leon", "sivan", "chaya", "oren", "neta"];
+      var userGuess = document.getElementById("userGuess");
+      var result = document.getElementById("res");
+      function checkMe() {
+        // for (var index=0;index<names.length;index+=1){
+        //     if (names[index]==userGuess.value){
+        //         res.innerHTML = "אתה תותח , אין אין עלייך";
+        //         return;
+        //     }
+        //     res.innerHTML = "איזה עלוב";
+        // }
+
+        if (names.indexOf(userGuess.value) >= 0) {
+          res.innerHTML = "אתה תותח , אין אין עלייך";
+        } else {
+          res.innerHTML = "איזה עלוב";
+        }
+      }
+    </script>
+  </body>
+</html>
