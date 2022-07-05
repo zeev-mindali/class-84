@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>no money</title>
+  </head>
+  <body>
+    <center>
+      <h1>איפה הכסף????</h1>
+      <hr />
+      <input
+        type="number"
+        name="salary"
+        id="money"
+        placeholder="enter salary bruto"
+      />
+      <input type="button" value="calc" onclick="calcMoney()" />
+      <div>maaser : <span id="m10"></span></div>
+      <div>chomush: <span id="m20"></span></div>
+      <hr />
+      <div>salary neto (10%) : <span id="s10"></span></div>
+      <div>salary neto (20%) : <span id="s20"></span></div>
+    </center>
+    <script>
+      var m10 = document.getElementById("m10");
+      var m20 = document.getElementById("m20");
+      var s10 = document.getElementById("s10");
+      var s20 = document.getElementById("s20");
+      var money = document.getElementById("money");
+
+      function calcMoney() {
+        var total = Number(money.value);
+        console.log(total);
+        m10.innerHTML = total * 0.1;
+        m20.innerHTML = total * 0.2;
+        s10.innerHTML = total * 0.9;
+        s20.innerHTML = total * 0.8;
+      }
+    </script>
+  </body>
+</html>
