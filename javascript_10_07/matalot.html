@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מטלות לזאביק המסכן</title>
+  </head>
+  <body>
+    <center>
+      <h1>
+        <div id="ourTime"></div>
+        <hr />
+      </h1>
+      <!-- form for getting data -->
+      <input
+        type="text"
+        id="job"
+        placeholder="what you need to do"
+      /><br /><br />
+      <select id="victim">
+        <option value="Zeev">Zeev</option>
+        <option value="Amital">Amital</option>
+      </select>
+      <br /><br />
+      <input type="date" id="jobDate" /><br /><br />
+      <input type="button" onclick="addJob()" value="אולי לתת שם לכפתור גם" />
+      <hr />
+      <table
+        width="70%"
+        border="1"
+        cellspacing="1"
+        cellpadding="1"
+        id="jobTable"
+      >
+        <th>id</th>
+        <th>job</th>
+        <th>owner</th>
+        <th>date</th>
+        <th>done</th>
+      </table>
+    </center>
+    <script>
+      var ourTime = document.getElementById("ourTime");
+      var date;
+      setInterval(function () {
+        date = new Date();
+        var dateSplit = date.toLocaleString().split(",");
+        ourTime.innerHTML = dateSplit[0] + "<br/>" + dateSplit[1];
+        //console.log(date.getTime());
+      }, 800);
+      function addJob() {
+        var job = document.getElementById("job");
+        var victim = document.getElementById("victim");
+        var jobDate = document.getElementById("jobDate");
+        var jobTable = document.getElementById("jobTable");
+
+        var myDate = "";
+        var itemId = "item" + date.getTime();
+        myDate += "<tr id='" + itemId + "''>";
+        myDate += "<td>" + itemId + "</td>";
+        myDate += "<td>" + job.value + "</td>";
+        myDate += "<td>" + victim.value + "</td>";
+        myDate += "<td>" + jobDate.value + "</td>";
+        myDate += "<td><input type='checkbox' /></td>";
+        myDate += "</tr>";
+        jobTable.innerHTML += myDate;
+      }
+    </script>
+  </body>
+</html>
