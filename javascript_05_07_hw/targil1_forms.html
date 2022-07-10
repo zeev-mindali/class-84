@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>true colors - sidney laufer</title>
+  </head>
+  <body>
+    <center>
+      <h1>True Colors</h1>
+      <hr />
+      <select id="colorSelect" onchange="colorMe(colorSelect.value)">
+        <option value="white">white</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="blue">blue</option>
+      </select>
+    </center>
+    <script>
+      //leon in 1997
+      //   document.getElementById("colorSelect").onchange = function() {
+      //     document.body.style.backgroundColor =
+      //       document.getElementById("colorSelect").value;
+      //   };
+
+      //leon in 2000
+      //   function colorMe() {
+      //     var myOption = document.getElementById("colorSelect");
+      //     document.body.style.backgroundColor = myOption.value;
+      //   }
+
+      //leon in 2010
+      //get the value of colorSelect and send it as parameter.
+      //   function colorMe(colorChange) {
+      //     document.body.style.backgroundColor = colorChange;
+      //   }
+
+      //leon in 2022
+      const colorMe = (colorChange) =>
+        (document.body.style.backgroundColor = colorChange);
+
+      // function zeev(){
+      //     0//bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      // }
+
+      // const zeev = function(){
+      //     //bla bla bla bla   bla bla bla bla bla bla bla bla bla bla bla
+      // }
+
+      //const zeev = ()=>{};
+    </script>
+  </body>
+</html>

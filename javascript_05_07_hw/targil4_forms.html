@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Take me Leon</title>
+  </head>
+  <body>
+    <center>
+      <h1>Take me leon !!!!</h1>
+      <hr />
+      <input type="text" id="uName" placeholder="enter your name" /><br /><br />
+      <input type="number" id="age" placeholder="Enter age" /><br /><br />
+      <select id="uCity" name="uCity" placeholder="choose city">
+        <br /><br />
+        <option></option>
+        <option value="north">North</option>
+        <option value="south">South</option>
+        <option value="center">center</option>
+        <option value="Eilat">Eilat</option></select
+      ><br /><br />
+      <input
+        type="text"
+        placeholder="enter your address"
+        id="address"
+      /><br /><br />
+      <input type="radio" name="gender" />Male
+      <input type="radio" name="gender" />Female
+      <input type="radio" name="gender" />Other<br /><br />
+      <input type="button" value="login" onclick="getValues()" />
+    </center>
+    <script>
+      function getValues() {
+        var uName = document.getElementById("uName");
+        var age = document.getElementById("age");
+        var uCity = document.getElementById("uCity");
+        var address = document.getElementById("address");
+        var gender = document.getElementById("gender");
+        if (checkValues(uName, age, uCity, address, gender)){
+            //we have all data :)
+        } else {
+            //we don't have all data :(
+                alert ("please fill all the fields")
+        }
+      }
+
+      function checkValues(uName, age, uCity, address, gender) {
+        //check for textbox only
+        if (
+          uName.value.length < 1 ||
+          age.value.length < 1 ||
+          uCity.value.length < 1 ||
+          address.value.length < 1
+        ) {
+          return false;
+        }
+        //radio button
+        for (var counter=0;counter<gender.length;counter+=1){
+            if (gender[counter].checked) {
+                return true;
+            }
+        }
+        return false;
+    </script>
+  </body>
+</html>
