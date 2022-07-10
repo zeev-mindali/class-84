@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Days of week</title>
+  </head>
+  <body>
+    <center>
+      <h1>
+        <div id="msg"></div>
+      </h1>
+      <hr />
+    </center>
+    <script>
+      //var days = ["ראשון", "שני", "שלישי", "רביעי", "חמישי", "נקיונות", "שבאס"];
+      var msg = document.getElementById("msg");
+      var date = new Date();
+
+      //   if (date.getDay() == 0) {
+      //     msg.innerText = "ראשון";
+      //   }
+      //   else if (date.getDay() == 1) {
+      //     msg.innerText = "שני";
+      //   }
+      //   else if (date.getDay() == 2) {
+      //     msg.innerText = "שלישי";
+      //   }
+      //   else if (date.getDay() == 3) {
+      //     msg.innerText = "רביעי";
+      //   }
+      //   else if (date.getDay() == 4) {
+      //     msg.innerText = "חמישי";
+      //   }
+      //   else if (date.getDay() == 5) {
+      //     msg.innerText = "נקיונות";
+      //   } else
+      //   //if (date.getDay() == 6) {
+      //     msg.innerText = "שבאס";
+      //   //}
+
+      switch (date.getDay()) {
+        case 0:
+          msg.innerText = "ראשון";
+          break;
+        case 1:
+          msg.innerText = "שני";
+          break;
+        case 2:
+          msg.innerText = "שלישי";
+          break;
+        case 3:
+          msg.innerText = "רביעי";
+          break;
+        case 4:
+        case 5:
+        case 6:
+          msg.innerText = "חופש!!!!";
+          break;
+      }
+    </script>
+  </body>
+</html>

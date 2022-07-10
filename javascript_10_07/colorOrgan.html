@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <input type="button" value="start" onclick="start()" />
+      <input type="button" value="stop" onclick="stop()" />
+    </center>
+    <script>
+      //declare a variable , if the variable is defined with var outside of function
+      //it will be global to all functions
+      var myOrgan; //undefined
+      var myColors = [
+        "white",
+        "black",
+        "red",
+        "green",
+        "yellow",
+        "orange",
+        "solomon",
+        "fuchsia",
+      ];
+      function start() {
+        myOrgan = setInterval(function () {
+          //my color [random number between 0 and length of myColors array]
+          var myColor = myColors[parseInt(Math.random() * myColors.length)];
+          console.log();
+          //change the background color;
+          document.body.style.backgroundColor = myColor;
+        }, 100);
+      }
+
+      function stop() {
+        clearInterval(myOrgan);
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+  </body>
+</html>
