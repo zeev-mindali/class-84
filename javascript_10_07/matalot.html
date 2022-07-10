@@ -9,23 +9,29 @@
   <body>
     <center>
       <h1>
+        <!-- div for displaying the time , the change of the content will be with innerHTML-->
         <div id="ourTime"></div>
         <hr />
       </h1>
-      <!-- form for getting data -->
+      <!-- form for getting job details -->
       <input
         type="text"
         id="job"
         placeholder="what you need to do"
+        value="give leon a buck"
       /><br /><br />
+      <!-- select from people that can do the job-->
       <select id="victim">
         <option value="Zeev">Zeev</option>
         <option value="Amital">Amital</option>
       </select>
       <br /><br />
+      <!-- get the date for the job -->
       <input type="date" id="jobDate" /><br /><br />
+      <!-- a button to add the job -->
       <input type="button" onclick="addJob()" value="אולי לתת שם לכפתור גם" />
       <hr />
+      <!-- create our table with headers-->
       <table
         width="70%"
         border="1"
@@ -33,7 +39,7 @@
         cellpadding="1"
         id="jobTable"
       >
-        <th>id</th>
+        <!-- headres of the table -->
         <th>job</th>
         <th>owner</th>
         <th>date</th>
@@ -41,30 +47,42 @@
       </table>
     </center>
     <script>
+      //pointers to element in the page
       var ourTime = document.getElementById("ourTime");
       var date;
+      //interval to display live clock on the screen
       setInterval(function () {
         date = new Date();
+        //split the time, to date and time by making array from , sign
         var dateSplit = date.toLocaleString().split(",");
+        //display the time and date separately
         ourTime.innerHTML = dateSplit[0] + "<br/>" + dateSplit[1];
         //console.log(date.getTime());
       }, 800);
       function addJob() {
+        //set pointers
         var job = document.getElementById("job");
         var victim = document.getElementById("victim");
         var jobDate = document.getElementById("jobDate");
         var jobTable = document.getElementById("jobTable");
 
-        var myDate = "";
-        var itemId = "item" + date.getTime();
-        myDate += "<tr id='" + itemId + "''>";
-        myDate += "<td>" + itemId + "</td>";
-        myDate += "<td>" + job.value + "</td>";
-        myDate += "<td>" + victim.value + "</td>";
-        myDate += "<td>" + jobDate.value + "</td>";
-        myDate += "<td><input type='checkbox' /></td>";
-        myDate += "</tr>";
-        jobTable.innerHTML += myDate;
+        // make new data of type string
+        var myData = "";
+        //add the new data from our form
+        //bad example:
+        //var myBadData = "<tr>"+"<td>" + job.value + "</td>"+"<td>" + victim.value + "</td>"+"<td>" + jobDate.value + "</td>"+"<td><input type='checkbox' /></td>"+"</tr>";
+
+        myData += "<tr>";
+        myData += "<td>" + job.value + "</td>";
+        myData += "<td>" + victim.value + "</td>";
+        myData += "<td>" + jobDate.value + "</td>";
+        myData += "<td><input type='checkbox' /></td>";
+        myData += "</tr>";
+        console.log(myData);
+        console.log(jobTable.innerHTML);
+        //add new data to table, by using the innerHTML
+        jobTable.innerHTML += myData;
+        console.log(jobTable.innerHTML);
       }
     </script>
   </body>
