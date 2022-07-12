@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="milkInArray.js"></script>
+    <title>Milk Duty</title>
+  </head>
+  <body>
+    <center>
+      <h1>Milk Duty (sivan not coming)</h1>
+      <hr />
+      <input type="text" id="uName" /><br /><br />
+      <input type="date" id="uDate" /><br /><br />
+      <input type="checkbox" id="milk" />milk<br /><br />
+      <input type="checkbox" id="coffee" />coffee<br /><br />
+      <input type="checkbox" id="cake" />cake<br /><br />
+      <input type="button" value="הוסף קורבן" onclick="updateMe()" /><br />
+      <hr />
+      <table width="50%" border="2" cellspacing="2" id="milkDuty"></table>
+      <br /><br />
+      <input type="button" value="מחק את האחרון" onclick="deleteLast()" />
+    </center>
+  </body>
+</html>
