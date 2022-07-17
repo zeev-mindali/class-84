@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page 29 targil 4</title>
+  </head>
+  <body>
+    <script>
+      var result = "";
+      var number = 5001; //0015
+      var temp = number;
+      var myArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      //iteration on the number
+      while (temp > 0) {
+        myArr[temp % 10] += 1;
+        //parseInt => get a normal number not decimal 5.4=>5
+        temp = parseInt(temp / 10);
+      }
+      //iteration on the result :)
+      for (var counter = 0; counter < myArr.length; counter += 1) {
+        for (var index = 0; index < myArr[counter]; index += 1) {
+          result += counter;
+        }
+      }
+      console.log(typeof myArr);
+    </script>
+  </body>
+</html>

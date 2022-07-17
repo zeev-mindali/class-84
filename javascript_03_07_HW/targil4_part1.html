@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>neta homework</title>
+  </head>
+  <body>
+    <script>
+      //מערך מאותחל מראש של ספרים
+      var books = [
+        "how to be rich",
+        "who moved by cheese",
+        "rich father poor father",
+        "the monk who sold is ferrai",
+        "poor is good",
+      ];
+      
+      //בקשה מהמשתמש לשם של ספר
+      var userBook = prompt("please enter the book name");
+      //מציאת אינדקס של איבר מסויים במערך
+      //var myIndex = book.indexOf(userBook);
+
+      if (books.indexOf(userBook) >= 0) {
+        console.log("we have the book");
+      } else {
+        console.log("book not found");
+      }
+    </script>
+  </body>
+</html>

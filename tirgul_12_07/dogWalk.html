@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dogWalk.css" />
+    <script src="dogWalk.js"></script>
+    <title>Sivan system</title>
+  </head>
+  <body>
+    <center>
+      <h1>Dog Walker</h1>
+      <hr />
+      <select id="childName">
+        <option>שירה</option>
+        <option>אביגיל</option>
+        <option>אורי</option>
+        <option>ינון</option>
+        <option>אליה</option>
+      </select>
+      <br /><br />
+      <input type="radio" name="outTime" value="בוקר" />בוקר
+      <input type="radio" name="outTime" value="צוהריים" />צוהריים
+      <input type="radio" name="outTime" value="ערב" />ערב <br /><br />
+      <input type="date" id="outDate" />
+      <br /><br />
+      <input type="button" value="הוסף מטלה" onclick="addTask()" />
+      <br />
+      <hr />
+      <table id="dogTable"></table>
+    </center>
+  </body>
+</html>

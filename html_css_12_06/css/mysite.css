@@ -1,0 +1,79 @@
+body{
+    background-color: purple;
+    color: white;
+}
+
+div,p{
+    background-color: black;
+    color: white;
+}
+
+p::first-letter{
+    font-size: 50px;
+    font-style: italic;
+}
+p::first-line{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+
+/* this is a class */
+.class84{
+    background-color: orange;
+    color: purple;
+}
+/* this is maor button, do not touch !!!!*/
+/* this is an id */
+#idCSS{
+    background-color: red;
+    color: blue;
+}
+
+table{
+   width:100px;
+   height:100px;
+    background-color: blue;
+    color:white;
+}
+ul>li{
+    color:red;
+}
+li>a{
+    color:green;
+}
+
+a:link{
+    color: white;
+}
+
+a:hover{
+    color:red;
+    color:rgb(255,0,255);
+    color:#00ff00;
+    color:rgb(0%,100%,10%);
+    font-size: 70px;
+}
+
+input[type="text"],input[type="password"]{
+    background-color: yellow;
+}
+
+/*
+    Css sizes:
+    in - inch
+    ex - X
+    em - relative                   <==
+    pc - pica 1point = 12points
+    pt - 1/72px
+    mm - millimeter
+    cm - cm
+    px - pixels                     <===
+*/
+
+td{
+    background-image: URL("https://s3.amazonaws.com/prod.skimble/photos/29359/hstzsdw4avx_large.gif");
+    width:50px;
+    height:50px;
+}

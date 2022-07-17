@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Function</title>
+  </head>
+  <body>
+    <center>
+      <h1>Date Function</h1>
+      <hr />
+      <input type="date" id="myDate" onchange="handleDate()" /><br /><br />
+      <div id="res" style="font-size: 40px"></div>
+    </center>
+    <script>
+      function handleDate() {
+        //pointer to html elements
+        var myDate = document.getElementById("myDate");
+        var res = document.getElementById("res");
+
+        //change the inner value of res div to our new date...
+        res.innerHTML = normalDate(myDate.value, "/"); //2022-07-08
+        console.log(normalDate(myDate.value, ":"));
+      }
+
+      function normalDate(oldDate, spt) {
+        //2022-07-08
+        //oldDate is a string :)
+        var changeDate = oldDate.split("-");
+        //zeevik style (hardcoded)
+        return changeDate[2] + spt + changeDate[1] + spt + changeDate[0];
+
+        //sivan style (beautiful code)
+        // var newDate = "";
+        // for (var counter = changeDate.length - 1; counter >= 0; counter -= 1) {
+        //   newDate += changeDate[counter] + (counter > 0 ? "/" : "");
+        // }
+
+        //return newDate;
+      }
+    </script>
+  </body>
+</html>

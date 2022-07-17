@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child nodes</title>
+  </head>
+  <body>
+    <a href="https://www.johnbryce.co.il">
+      <img height="200" src="img/image1.jpg" />
+      <img height="200" src="img/image2.jpg" />
+    </a>
+    <script>
+      var img2 = document.body.childNodes[0].childNodes[1];
+      alert(img2.src);
+    </script>
+  </body>
+</html>

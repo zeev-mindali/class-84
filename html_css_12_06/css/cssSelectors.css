@@ -1,0 +1,46 @@
+#one>button:first-child{
+    background: red;
+}
+
+#one>button:last-child{
+    background: greenyellow;
+}
+
+#one>button:nth-child(2){
+    background: maroon;
+}
+
+#two>button:nth-child(odd){
+    background: blue;
+}
+
+#two>button:nth-child(even){
+    background: cyan;
+}
+
+#three>button:nth-child(3n+1){
+    background-color: yellow;
+}
+
+#three>button:nth-last-child(2){
+    background: black;
+}
+
+#four>button:hover{
+    opacity: 0.5;
+}
+
+#four>button:active{
+    font-weight: bold;
+}
+
+#five>button:not(:hover){
+    border: 1px solid red;
+}
+
+#six>button[name=oren]{
+    background: greenyellow;
+}
+#six>button[name=neta]{
+    border: 2px double red;
+}

@@ -1,0 +1,16 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    font-weight: 900;
+    line-height: 120px;
+    font-variant: small-caps;
+    color: red;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.zeev{
+    direction: rtl;
+    border-style: dashed;
+    border-width: 10px;
+    cursor: help;
+}

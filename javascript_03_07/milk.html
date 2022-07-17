@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>תורנות חבל</title>
+  </head>
+  <body>
+    <script>
+      var buying = [
+        "וובה",
+        "נטע",
+        "חיה",
+        "יסמין",
+        "אורן",
+        "אלכסנדר",
+        "שבת קויידש",
+      ];
+      var days = ["ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שאבס"];
+      //יצירת טבלה
+      document.write("<center><table border='2' cellspacing='0'>");
+      //הדפסת הימים
+      //יצירת שורה בטבלה עבור הימים
+      document.write("<tr>");
+      for (var counter = 0; counter < days.length; counter += 1) {
+        //הדפסת תא בודד המייצג יום בודד
+        document.write("<td><center>" + days[counter] + "</center></td>");
+      }
+      //סגירת שורה בטבלה
+      document.write("</tr>");
+      //יצירת שמות הקורבנות
+      //יצירת שורה בטבלה עבור השמות
+      document.write("<tr>");
+      for (var counter = 0; counter < days.length; counter += 1) {
+        //הדפסת תא בודד המייצג שם בודד
+        document.write("<td><center>" + buying[counter] + "</center></td>");
+      }
+      //סגירת שורה בטבלה
+      document.write("</tr>");
+      //סגירת טבלה
+      document.write("</table></center>");
+      document.write("<br/><br/><hr/>");
+      document.write("milk price : <span id='milkPrice'>6 </span>nis");
+      var newMilkPrice = document.getElementById("milkPrice");
+      //שינוי תוכן של זיהוי של החלב
+      //newMilkPrice.innerHTML = "<b>9 </b>";
+      var tdTags = document.getElementsByTagName("td");
+      for (var counter = 0; counter < tdTags.length; counter += 1) {
+        //tdTags[counter].innerText = "Pay for view";
+        tdTags[counter].innerHTML =
+          "<a href='https://www.johnbryce.co.il/'>Pay for view</a>";
+      }
+    </script>
+  </body>
+</html>
