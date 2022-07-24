@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers=[5,8,4,2,9,6,3,7,5,4,1,7,5,10,12];
+        //iliya 2000
+        //print only even numbers (זוגי)
+        // for (let counter=0;counter<numbers.length;counter+=1){
+        //     if (numbers[counter]%2==0){
+        //         console.log(numbers[counter]);
+        //         push evenNumber(numbers[counter]);
+        //     }
+        // }
+        const evenNumbers=numbers.filter(item=>item%2==0);
+        evenNumbers.map(item=>console.log(item))
+            
+        //console.log(evenNumbers);
+        //(item)=>{
+        //    return item%2==0 }
+        //    );
+    </script>
+</body>
+</html>
+
+<!-- 
+//tirza 2000
+function checkEven(number){
+    return number%2==0;
+}
+//tirza 2010
+const checkEven = function(number){
+    return number%2==0;
+}
+
+//tirza 2020 - arrow function
+const checkEven = (number)=>{return number%2==0}
+-->

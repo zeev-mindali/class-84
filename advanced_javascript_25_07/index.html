@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object , live in heap , stack have only memory reference as value
+        var o=[1,2,3,4], p=[1,2,3,4];
+        //live in stack, by it's value
+        var x=5,y="5";
+        //console.log(x===y);
+        //console.log(typeof o);
+        //byRef , byVal
+        var num1=5;
+        var num2=num1;
+
+        //byRef
+        var arr1=[1,2,3,4];
+        var arr2=arr1;
+        console.log(arr1);
+        console.log(arr2);
+        arr2.push("wtf");
+        console.log(arr1);
+        console.log(arr2);
+
+        //byVal
+        var num1=5;
+        var num2=7;
+        console.log(num1,num2);
+        num2=num1;
+        console.log(num1,num2);
+        num2=10;
+        console.log(num1,num2);
+
+    </script>
+</body>
+</html>
