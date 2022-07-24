@@ -1,3 +1,12 @@
 body{
     text-align: center;
+    background-image: URL("../media/tile.jpg");
 }
+.taskData{
+    background-image: URL("../media/formbg.jpg");
+    padding :30px;
+    width: 40%;
+    position: relative;
+    margin-left: 30%;
+}
+
