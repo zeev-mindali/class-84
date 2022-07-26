@@ -24,6 +24,31 @@
         //(item)=>{
         //    return item%2==0 }
         //    );
+
+        const names = ["zeev","amital","Vladimir"];
+
+        for (let name of names){
+            console.log(name);
+        }
+        //0 1 0 1 1 1 1 0
+        //iliya 2020
+        names.map(item=>console.log(item));
+
+        console.log("------------------------")
+        const userData = (name,age,city)=>{
+            if (name){console.log(` user: ${name}`)};
+            if (age){console.log(` age: ${age}`)};
+            if (city){console.log(` city: ${city}`)};
+            // console.log(`
+            //   user: ${name}
+            //   age : ${age}
+            //   city: ${city}
+            // `);
+        }
+
+        userData("zeev",48,"qiryat Yam");
+        console.log("------------------------")
+        userData("zeev");
     </script>
 </body>
 </html>

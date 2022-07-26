@@ -1,0 +1,12 @@
+function x(number){
+    return number*number;
+}
+const x1 = function (number){return number**2}
+const x2 = (number)=>{number**2}
+
+
+x(2)
+x1(2)
+x2(2)
+
+
