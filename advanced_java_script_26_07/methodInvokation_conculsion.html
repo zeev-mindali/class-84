@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method</title>
+</head>
+<body>
+    <script>
+        function addSum(a,b,c){
+            this.sum = a+b+c;
+        }
+
+        //as function
+        addSum(10,20,30);
+        console.log(sum);
+
+        //as method
+        var obj0 = {
+            addSumMethod: addSum,
+        }
+        obj0.addSumMethod(10,20,30);
+        console.log(obj0.sum);
+
+        //indirect invocation - קריאה עקיפה
+        var obj1= {}; //אובייקט ליטרלי ריק
+        //var arr = [];
+        //כאשר יש לנו מספר משתנים כמספר הארגומנטים של הפונקציה נשתמש בפקודה
+        addSum.call(obj1,10,20,30);
+        console.log(obj1.sum);
+
+        var obj2 = {}
+        var myArr = [10,20,30];
+        //כאשר יש לנו מערך בגודל מספר המשתנים הקיים, נשתמש בפקודה
+        addSum.apply(obj2,myArr);
+        console.log(obj2.sum);
+
+        //בוב הבנאי - constructor
+        var obj3 = new addSum(40,50,60);
+        console.log(obj3.sum);
+        console.log(obj0.sum);
+
+    </script>
+</body>
+</html>

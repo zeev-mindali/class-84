@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoking methods :)</title>
+</head>
+<body>
+    <script>
+       var calc = { //literal object
+        opr1: 5,
+        opr2: 7,
+        add: function(){
+            //we will use the THIS command to refer the same object
+            this.result = this.opr1+this.opr2;
+        },
+        minus: function(){
+            this.result = this.opr1-this.opr2;
+        },
+        multiplte: function(){
+            this.result = this.opr1*this.opr2;
+        },
+        divide: function(){
+            this.result = this.opr2 == 0 ? 0 : this.opr1/this.opr2;
+        }
+    }
+
+       
+    //    
+    //calc.opr1 = 10;
+    //calc.opr2 = 20;
+    //console.log(calc.opr1*calc.opr2);
+    calc.add(); //method invocation
+    console.log(calc.result);
+
+    //minus - , multiplte * , divide /
+
+    
+    </script>
+</body>
+</html>

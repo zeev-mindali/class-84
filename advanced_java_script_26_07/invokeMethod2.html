@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ilyaCar = {
+            //fields
+            color :"red",
+            wheels: 4,
+            //methods
+            setColor: function(newColor){
+                console.log("old color:",this.color);
+                this.color = newColor;
+                console.log("new color:",this.color);
+            }
+        }
+
+        //ilyaCar.setColor("Black");
+
+        function setNewCar(car,newColor){
+            console.log("before change color:",car.color);
+            car.color = newColor;
+            console.log("after change color:",car.color);
+
+        }
+
+        //setNewCar(ilyaCar,"blue gual nefesh");
+
+        var myCar = new ilyaCar();
+        myCar.setColor("red");
+        console.log(ilyaCar);
+        console.log(myCar);
+
+
+        var samuel = {
+            //fields - שדות
+            age: 21,
+            height: 175,
+            name: "samuel dancour",
+            married: false,
+            //methods - פעולות
+            drive: function(){
+                console.log("Kaboooom");
+            },
+            dance: function(){
+                console.log("was in dancing with star");
+            },
+            sing: function(){
+                console.log("lost in the voice");
+                return "oui oui oui";
+            }
+        };
+
+        console.log(samuel.age);
+        console.log(samuel.sing());
+    </script>
+</body>
+</html>

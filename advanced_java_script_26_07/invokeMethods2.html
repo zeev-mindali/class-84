@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoking methods 2</title>
+</head>
+<body>
+    <script>
+        // var obj = {
+        //     f1: function(){
+        //         var self=this;
+        //         console.log(this === obj); //true
+        //         f2();
+
+        //         function f2(){
+        //             console.log(this===obj); //false
+        //             console.log(self===obj); //true
+        //         }
+        //     }
+            
+            
+        // };
+        //obj.f1();
+
+        var obj = {
+            f1: function(){
+                console.log(this === obj); //true
+                var f2 = ()=>{
+                    console.log(this === obj); //true
+                };
+                f2();
+            }
+           
+        };
+        //obj.f1();
+
+        var leon = (name)=>{
+            console.log(`hello ${name}`);
+        }
+
+        function oldLeon(name){
+            console.log(`hello ${name}`);
+        }
+
+        leon ("Leon the king");
+    </script>
+</body>
+</html>
