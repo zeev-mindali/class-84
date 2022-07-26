@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>some demo</title>
+</head>
+<body>
+    <script>
+        // c^2 = a^2 + b^2
+        //c = Math.sqrt(a^2 + b^2);
+
+        //yasmin 2022
+        const pythagoras = (a,b) => Math.sqrt(a**2 + b**2);
+
+        //yasmin 2000
+        function pythagoras_old(a,b){
+            return Math.sqrt(a^2 + b^2);
+        }
+
+        function helloUser(userName) {
+            //return "Hello " + userName;
+            /*
+                **************
+                * Hello Zeev * 4+5=9
+                **************
+            */
+            function misgeret(userName){
+                let str="";
+                for (let counter=0;counter<userName.length+10;counter+=1){
+                    str+="*";
+                }
+                str+="\n"; //new line
+                str+=`* Hello ${userName} *\n`;
+                for (let counter=0;counter<userName.length+10;counter+=1){
+                    str+="*";
+                }
+                return str;
+            }
+            //return ("Hello");
+            //return `Hello ${userName} \nclass84`;
+            //console.log(misgeret("zeev"));
+             //return userName;
+            return (misgeret(userName));
+           
+        }
+
+        // function border(userName){
+        //     helloUser(userName);
+        // }
+
+        console.log(helloUser("Jasmine"));
+        //console.log(pythagoras(15,40));
+        //console.log(misgeret("zeev"));
+
+
+        // function connectUser(userCredentials){
+        //     function checkUser(userCredentials){}
+        //     function updateLog(userCredentials){}
+        //     function updateDB(userCredentials){}
+        //     function alertAdmin(userCredentials){}
+        //     return true:false;
+        // }
+    </script>
+</body>
+</html>
