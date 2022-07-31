@@ -1,0 +1,10 @@
+body{
+    background-image: url("../media/tile.jpg");
+}
+fieldset{
+    width:20%;
+    border-color: black;
+    color: blue;
+    font-weight: bolder;
+    font-size: larger;
+}

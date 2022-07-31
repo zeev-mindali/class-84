@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>השלמה</title>
+
+    <!-- my scriptsssss -->
+    <script defer src="js/myData.js"></script>
+    <script defer src="js/myFunctions.js"></script>
+    <script defer src="js/myObjects.js"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/myCss.css" />
+  </head>
+  <body onload="init()">
+    <center>
+      <h1>המטלות שלי - כי אמיטל לא מוותרת</h1>
+      <hr />
+      <br />
+      <fieldset>
+        <legend>new task</legend>
+        <form action="javascript:sendData()">
+          <input
+            type="text"
+            placeholder="שם המטלה - אבל ברחמנות"
+            id="taskName"
+          /><br /><br />
+          <input type="date" id="taskDate" /><br /><br />
+          <input type="time" id="taskTime" /><br /><br />
+          <input type="submit" value="Submit" />
+          <input type="reset" value="reset" />
+        </form>
+      </fieldset>
+    </center>
+  </body>
+</html>
