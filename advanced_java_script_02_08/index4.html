@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getter and Setter</title>
+  </head>
+  <body>
+    <center>
+      <h1>Getter & Setter</h1>
+      <hr />
+    </center>
+    <script>
+      //setter
+      let tasks = {
+        all: [],
+        set todo(task) {
+          this.all.push(task);
+        },
+        moto: "",
+      };
+      tasks.todo = "feed the cat";
+      tasks.todo = "clean the house";
+      tasks.todo = "go shopping";
+      tasks.moto = "All you need is Rom";
+      tasks.moto = "Kill leon";
+      tasks.moto = "leon is OK";
+      console.log(tasks.all);
+      console.log(todo);
+
+      let book = {
+        name: "Rich father poor father",
+        price: 70,
+        get totalPrice() {
+          return this.price * 1.17;
+        },
+      };
+      //console.log(book.name, Math.ceil(book.totalPrice), "nis");
+      console.log(book.name, book.totalPrice, "nis");
+    </script>
+  </body>
+</html>

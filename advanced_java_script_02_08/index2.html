@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <center>
+      <h1>Objects</h1>
+      <hr />
+    </center>
+    <script>
+      let myObj = new Object(); //object literl {}
+      let myArr = new Array(); // []
+      let myDate = new Date();
+
+      let myObjCreation = Object.create({ x: 1, y: 2 });
+      let meLazy = { x: 1, y: 2 };
+      //console.log(myObjCreation);
+      myObjCreation.z = 3;
+      //console.log(myObjCreation);
+      let shmuel_the_rich = { ...myObjCreation };
+
+      let car = {
+        color: "white",
+        name: "lion lebiov",
+      };
+
+      console.log(car.color);
+      let meWant = "name";
+      console.log(car[meWant]);
+    </script>
+  </body>
+</html>
