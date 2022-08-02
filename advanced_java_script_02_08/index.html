@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is Object?</title>
+  </head>
+  <body>
+    <center>
+      <h1>Class 84 - Objects</h1>
+      <hr />
+      it's all about objects
+    </center>
+    <script>
+      let myArr = [];
+      console.log(typeof myArr);
+      console.log(myArr);
+
+      //object literl
+      let obj1 = {
+        name: "zeev",
+        age: "48",
+        city: "Qiryat Yam",
+      };
+      //same place in memory
+      let obj2 = obj1;
+      //fix this issue with spread operator
+      let obj3 = { ...obj1 };
+      let obj = {
+        //Prototypes can be set this way
+        __proto__: Object,
+
+        //methods
+        funNum: () => {
+          return 3;
+        },
+        //key === val , sameVal : sameVal
+        sameVal: 5,
+        //Dyanmic values for keys
+        //[getDynamicKey()]: "value of dynamic key",
+      };
+
+      const myFun = () => {
+        return 3;
+      };
+
+      console.log("obj.__proto__", obj.__proto__);
+      console.log("obj.sameVal", obj.sameVal);
+      console.log("obj.funNum()", obj.funNum());
+    </script>
+  </body>
+</html>

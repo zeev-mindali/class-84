@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my calculator</title>
+  </head>
+  <body>
+    <center>
+      <h1>My calculator</h1>
+      <hr />
+      <input type="text" id="userExp" />
+      <input type="button" value="calc" onclick="myCalc.calc(userExp.value)" />
+      <br />
+      <div id="res">waiting for user expression</div>
+    </center>
+    <script>
+      let myCalc = {
+        //fields
+        num1: 0,
+        num2: 0,
+        opr: "",
+        //methods / functions
+        add: (num1, num2) => {
+          return num1 + num2;
+        },
+        minus: (num1, num2) => {
+          return num1 - num2;
+        },
+        mul: (num1, num2) => {
+          return num1 * num2;
+        },
+        div: (num1, num2) => {
+          return num1 / num2;
+        },
+        calc: (userExpData) => {
+          userExpData.contains("+")
+          //console.log(userExp);
+          let myData = userExpData.split(" ");
+          num1 = Number(myData[0]);
+          opr = myData[1];
+          num2 = Number(myData[2]);
+          switch (opr) {
+            case "+":
+              res.innerHTML = myCalc.add(num1, num2);
+              break;
+            case "-":
+              res.innerHTML = myCalc.minus(num1, num2);
+              break;
+            case "*":
+              res.innerHTML = myCalc.mul(num1, num2);
+              break;
+            case "/":
+              res.innerHTML = myCalc.div(num1, num2);
+              break;
+          }
+          userExp.value = "";
+        },
+      };
+    </script>
+  </body>
+</html>
