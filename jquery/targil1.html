@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>targil 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <h1>Dark Mode</h1>
+      <hr />
+      <input type="text" placeholder="user name..." /><br /><br />
+      <input type="password" placeholder="user password..." /><br /><br />
+      <input type="button" value="login" /><br /><br />
+      <input
+        type="button"
+        id="darkMode"
+        value="night"
+        onclick="dayNight()"
+      /><br /><br />
+    </center>
+    <script>
+      let isNight = false;
+      const dayMode = { background: "white", color: "black" };
+      const nightMode = { background: "black", color: "white" };
+      const dayNight = () => {
+        $("body, input").css(isNight ? dayMode : nightMode);
+        //$("input").css(isNight ? dayMode : nightMode);
+        $("#darkMode").attr("value", !isNight ? "day" : "night");
+        isNight = !isNight;
+      };
+    </script>
+  </body>
+</html>
