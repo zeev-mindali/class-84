@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(() => {
+        $(".classic")
+          .find("p")
+          .eq(2)
+          .html("class 84 - the best that lecturer can get");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jQuery</h1>
+    <div class="classic">
+      <p>Write less do <span id="spanId">More</span></p>
+      <p id="pId">Current Version : 3.6.0</p>
+      <p>Class 82</p>
+    </div>
+    <p>Require knowledge in:</p>
+    <ul id="listId">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h3>Version Information</h3>
+    <table class="classic" border="1">
+      <tr>
+        <td>ver</td>
+        <td>gzip</td>
+      </tr>
+      <tr>
+        <td>1.x</td>
+        <td>31kb</td>
+      </tr>
+      <tr>
+        <td>2.x</td>
+        <td>27.7kb</td>
+      </tr>
+      <tr>
+        <td>3.x</td>
+        <td>29.9lb</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      .alex {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Login System</h1>
+      <hr />
+      <br />
+      <input type="text" placeholder="user name..." value="zeev" /><br /><br />
+      <input
+        type="password"
+        placeholder="user password..."
+        value="12345"
+      /><br /><br />
+      <input type="text" class="vovchik" />
+      <br /><br />
+      <input type="button" value="login" onclick="makeLogin()" />
+    </center>
+
+    <script>
+      const makeLogin = () => {
+        console.log("user details");
+        //console.log($("input").val(), $("input:eq(1)").val());
+        $("input:button").val("the system was hacked by shmuel");
+        $("input:eq(2)").attr("type", "date");
+        if (!$("input:eq(2)").hasClass("alex")) {
+          $("input:eq(2)").addClass("alex");
+          $("input:eq(2)").removeClass("vovchik");
+          $("input:eq(0)").css({ background: "blue", color: "orange" });
+          $("input:eq(0)").css({ background: "black", color: "white" });
+          //[] {k,v}
+        }
+      };
+    </script>
+  </body>
+</html>
