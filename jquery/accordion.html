@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>My Menu</title>
+    <style>
+      body {
+        font-family: Geneva, Arial, Helvetica, sans-serif;
+      }
+      .menu {
+        width: 200px;
+        background-color: purple;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+      }
+      .menuitems {
+        width: 200px;
+      }
+      li {
+        list-style-type: none;
+      }
+      a {
+        display: block;
+        background-color: grey;
+        color: white;
+        padding: 5px;
+        border-bottom: 1px solid white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 5px;
+      }
+      a:hover {
+        background: line;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="menu">News</h3>
+    <ul class="menuitems">
+      <li><a href="#">News 1</a></li>
+      <li><a href="#">News 2</a></li>
+    </ul>
+    <h3 class="menu">Computing</h3>
+    <ul class="menuitems">
+      <li><a href="#">computer 1</a></li>
+      <li><a href="#">computer 2</a></li>
+      <li><a href="#">computer 3</a></li>
+      <li><a href="#">computer 4</a></li>
+    </ul>
+    <h3 class="menu">World News</h3>
+    <ul class="menuitems">
+      <li><a href="#">world 1</a></li>
+      <li><a href="#">world 2</a></li>
+      <li><a href="#">world 3</a></li>
+      <li><a href="#">world 4</a></li>
+    </ul>
+    <script>
+      $(() => {
+        $(".menuitems").hide();
+        $(".menu").mouseover(function () {
+          $(this).next().slideDown(200).siblings(".menuitems").slideUp(200);
+        });
+      });
+    </script>
+  </body>
+</html>
