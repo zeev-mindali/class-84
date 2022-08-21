@@ -11,21 +11,28 @@
         background-color: red;
       }
     </style>
+    <script src="js/myJS.js"></script>
   </head>
   <body>
     <center>
       <h1>Login System</h1>
       <hr />
       <br />
-      <input type="text" placeholder="user name..." value="zeev" /><br /><br />
-      <input
-        type="password"
-        placeholder="user password..."
-        value="12345"
-      /><br /><br />
-      <input type="text" class="vovchik" />
-      <br /><br />
-      <input type="button" value="login" onclick="makeLogin()" />
+      <form action="javascript:makeLogin()">
+        <input
+          type="text"
+          placeholder="user name..."
+          value="zeev"
+        /><br /><br />
+        <input
+          type="password"
+          placeholder="user password..."
+          value="12345"
+        /><br /><br />
+        <input type="text" class="vovchik" />
+        <br /><br />
+        <input type="submit" value="login" />
+      </form>
     </center>
 
     <script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sync/Async</title>
+  </head>
+  <body>
+    <center>
+      <h1>sync vs async</h1>
+      <hr />
+      <input type="button" value="pressMe" onclick="meClick()" />
+    </center>
+    <script>
+      //console.log("i will run second");
+      //   function meClick() {
+      //     console.log("you pressed me");
+      //   }
+      //   console.log("i will run first");
+      //   setInterval(() => {
+      //     console.log("Leon");
+      //   }, 1000);
+      //   setInterval(() => {
+      //     console.log("Vova");
+      //   }, 1000);
+      //   setInterval(() => {
+      //     console.log("Rooooooooooooooooooooooooooooooooooom");
+      //   }, 1000);
+      console.log("me begin....");
+      let myTime = 1500;
+      setTimeout(() => {
+        console.log("me start after 1500ms");
+        let x = setInterval(() => {
+          console.log(new Date().toLocaleTimeString());
+        }, 500);
+        setTimeout(() => {
+          clearInterval(x);
+        }, 1000);
+      }, myTime);
+    </script>
+  </body>
+</html>

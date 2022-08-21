@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Kill Leon app...</title>
+  </head>
+  <body>
+    <center>
+      <h1>Kill Leon App</h1>
+      <hr />
+      <div id="leon" style="background: #009fff; width: 150px">
+        <span id="closeMe" style="float: right">X</span><br /><br />
+        My name is Leon<br />
+        Mess with the best and die like the rest<br /><br />
+      </div>
+      <input type="button" value="leon Daba" onclick="leonFat()" />
+      <input type="button" value="bring leon back" onclick="leonAlive()" />
+    </center>
+    <script>
+      const slow = () => 1000;
+      const fast = () => 100;
+      const baiden = () => 5000;
+
+      $("#closeMe").click(function () {
+        //alert("Please kill leon!");
+        //$(this).parent().fadeOut(baiden());
+        //alert("zeev");
+        $(this).parent().slideUp(300).delay(800).fadeOut(400, 0.33);
+      });
+      const leonAlive = () => {
+        $("#leon").slideDown(300).delay(800).fadeIn(400);
+      };
+
+      const leonFat = () => {
+        $("#leon").animate(
+          {
+            width: "100%",
+            fontSize: "50px",
+          },
+          1500
+        );
+      };
+    </script>
+  </body>
+</html>
