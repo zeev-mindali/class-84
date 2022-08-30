@@ -13,6 +13,7 @@ abstract class Table implements Tableable {
   responseTime: number;
   dish: number;
   response: number;
+  public static tableArray: Table[] = [];
 
   constructor(
     person: number,
@@ -47,8 +48,8 @@ class Regular extends Table {
 }
 
 class Vip extends Table {
-  constructor(dish: number) {
-    super(8, "Sivan", dish, 2);
+  constructor() {
+    super(8, "Sivan", Math.floor(Math.random() * 8), 2);
   }
   public toString() {
     let msg = "\n" + this.waiter + "\n================================\n";
@@ -71,5 +72,7 @@ let table3 = new Vip(10);
 let table4 = new Leon(1); //eats only greber
 
 let tableArray = [table1, table2, table3, table4];
+let itamerArray = [new Bar(2), new Regular(4), new Vip(10), new Leon(1)];
 
-tableArray.map((item) => console.log(item.toString()));
+//tableArray.map((item) => console.log(item.toString()));
+//Table.tableArray.map((item) => console.log(item.toString()));

@@ -20,6 +20,7 @@ var Table = /** @class */ (function () {
         this.dish = dish;
         this.responseTime = responseTime;
         this.response = this.person * this.dish * responseTime;
+        tableArray.push(this);
     }
     //   public getYebushTime(): number {
     //     return this.response;
@@ -27,6 +28,7 @@ var Table = /** @class */ (function () {
     Table.prototype.toString = function () {
         return "total person ".concat(this.person, " ordered ").concat(this.dish, " dishes and will wait for ").concat(this.response, " time");
     };
+    Table.tableArray = [];
     return Table;
 }());
 var Bar = /** @class */ (function (_super) {
@@ -69,4 +71,6 @@ var table2 = new Regular(4);
 var table3 = new Vip(10);
 var table4 = new Leon(1); //eats only greber
 var tableArray = [table1, table2, table3, table4];
-tableArray.map(function (item) { return console.log(item.toString()); });
+var itamerArray = [new Bar(2), new Regular(4), new Vip(10), new Leon(1)];
+//tableArray.map((item) => console.log(item.toString()));
+Table.tableArray.map(function (item) { return console.log(item.toString()); });
