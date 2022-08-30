@@ -7,9 +7,10 @@ interface Accountable {
   deposit: (amount: number) => void;
   withdraw: (amount: number) => void;
   print: () => void;
+  gift: () => string;
 }
 
-class Account implements Accountable {
+abstract class Account implements Accountable {
   accountNumber: number;
   balance: number;
   limited: boolean;
@@ -25,6 +26,7 @@ class Account implements Accountable {
     this.balance = 0;
     this.commission = commission;
   }
+  abstract gift(): string;
 
   //deposit: (amount: number) => void;
   public deposit(amount: number): void {
@@ -52,6 +54,14 @@ class Account implements Accountable {
 }
 
 class Bussniess extends Account {
+  public gift(): string {
+    return "Calender";
+  }
+  //   gift: () => "Calender";
+
+  //   public gift():void{
+  //     console.log("Gift: calender")
+  //   }
   private loan: number = 0;
 
   public getLoan(amount: number): void {
@@ -59,9 +69,12 @@ class Bussniess extends Account {
   }
 }
 
-class Private extends Account {}
+class Private extends Account {
+  gift: () => "two ticket for lion standup comedy";
+}
 
 class Student extends Account {
+  gift: () => "Two tickets for metalica";
   public print(): void {
     super.print();
     console.log("i am so poor, i can't even pay attention");
@@ -77,8 +90,11 @@ chaya.deposit(18);
 let lion = new Bussniess(0.2);
 lion.withdraw(100000);
 
+//let zeev = new Account(0.3); => account is abstract , and we can not create object from abstract
+
 vova.print();
 rom.print();
 chaya.print();
 lion.print();
 vova.printProfit();
+console.log(vova.gift());

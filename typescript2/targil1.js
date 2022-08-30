@@ -46,9 +46,16 @@ var Bussniess = /** @class */ (function (_super) {
     __extends(Bussniess, _super);
     function Bussniess() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
+        //   gift: () => "Calender";
+        //   public gift():void{
+        //     console.log("Gift: calender")
+        //   }
         _this.loan = 0;
         return _this;
     }
+    Bussniess.prototype.gift = function () {
+        return "Calender";
+    };
     Bussniess.prototype.getLoan = function (amount) {
         this.loan += amount;
     };
@@ -80,8 +87,10 @@ var chaya = new Student(0.0);
 chaya.deposit(18);
 var lion = new Bussniess(0.2);
 lion.withdraw(100000);
+//let zeev = new Account(0.3); => account is abstract , and we can not create object from abstract
 vova.print();
 rom.print();
 chaya.print();
 lion.print();
 vova.printProfit();
+console.log(vova.gift());
