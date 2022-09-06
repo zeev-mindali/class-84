@@ -113,8 +113,8 @@ function getData() {
   console.log(myURL);
   $.ajax({
     url: myURL,
-    success: function (data) {
-      myResult = data.result.records;
+    success: function (response) {
+      myResult = response.result.records;
       getTotal();
       createTable();
       console.log(myResult);
