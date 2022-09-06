@@ -5,18 +5,41 @@ let myResult = [];
 // Document ready after leon will cry....
 $(() => {
   $("#searchMe").click(() => {
-    if (!sessionStorage.getItem("data")) {
-      console.log("getting data from server...");
-      getData();
-    } else {
-      console.log("getting data from session...");
-      myResult = JSON.parse(sessionStorage.getItem("data"));
-      getNapot().map((item) => console.log(item));
-    }
-    console.log(myResult[1]);
-    getTotal();
+    // if (!sessionStorage.getItem("data")) {
+    //   console.log("getting data from server...");
+    //   getData();
+    // } else {
+    //   console.log("getting data from session...");
+    //   myResult = JSON.parse(sessionStorage.getItem("data"));
+    //   getNapot().map((item) => console.log(item));
+    // }
+    getData();
+    //console.log(myResult[1]);
+    // getTotal();
+    // createTable();
   });
 });
+
+const createTable = () => {
+  let tableBuilder = "";
+
+  tableBuilder += "<table>";
+  getTotal().map((item) => {
+    tableBuilder += `<tr>
+    <td>${item.napa}</td>
+    <td>${item.age5_0}</td>
+    <td>${item.age6_18}</td>
+    <td>${item.age19_45}</td>
+    <td>${item.age46_55}</td>
+    <td>${item.age56_64}</td>
+    <td>${item.age65}</td>
+    <td>${item.total}</td>
+    </tr>`;
+  });
+  tableBuilder += "</table>";
+
+  $("#res").html(tableBuilder);
+};
 
 const getNapot = () => {
   let napot = [];
@@ -86,12 +109,17 @@ const getTotal = () => {
 };
 
 function getData() {
+  const myURL = url + $("#city").val();
+  console.log(myURL);
   $.ajax({
-    url: url, //+$("#city").val()
+    url: myURL,
     success: function (data) {
       myResult = data.result.records;
+      getTotal();
+      createTable();
+      console.log(myResult);
       //console.log(myResult);
-      sessionStorage.setItem("data", JSON.stringify(myResult));
+      //sessionStorage.setItem("data", JSON.stringify(myResult));
     },
   });
 }
