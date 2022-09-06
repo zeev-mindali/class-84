@@ -115,7 +115,7 @@ function getData() {
     url: myURL,
     success: function (response) {
       myResult = response.result.records;
-      getTotal();
+      //   getTotal();
       createTable();
       console.log(myResult);
       //console.log(myResult);
