@@ -37,6 +37,42 @@ $("#stat").click(() => {
   $("#res").html(createTable());
 });
 
+$("#search").click(() => {
+  const myCity = $("#city").val();
+  const cityData = myData.filter((item) => item["יישוב"].includes(myCity));
+  $("#res").html(createCityTable(cityData));
+  console.log(cityData);
+});
+
+const createCityTable = (data) => {
+  let tableData = "<table class='center' style='direction: rtl'>";
+  tableData += `
+    <tr>
+    <td>יישוב</td>
+    <td>יזם</td>
+    <td>שם תוכנית</td>
+    <td>קישור</td>
+    </tr>`;
+  data.map((item) => {
+    console.log(item);
+
+    tableData += `
+        <tr>
+            <td>${item["יישוב"]}</td>
+            <td>${item["יזם תכנון"]}</td>
+            <td>${item["שם תוכנית"]}</td>
+        `;
+    if (item["קישור לאתר מנהל תכנון"]) {
+      tableData += `<td><a href=${item["קישור לאתר מנהל תכנון"]}>קישור לאתר</a></td>`;
+    }
+  });
+
+  tableData += "</tr>";
+  tableData += "</table>";
+
+  return tableData;
+};
+
 const createTable = () => {
   let tableData = "<table class='center'>";
   tableData += "<tr >";
