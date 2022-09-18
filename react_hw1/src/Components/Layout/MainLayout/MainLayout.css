@@ -1,0 +1,30 @@
+.MainLayout {
+	height: 100%;
+    box-sizing: border-box; /* fix bug in browsers */
+    display: grid;
+    grid-template-rows: 10% 30% 60%;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+}
+
+
+.MainLayout>#getKiller{
+    grid-column: span 2;
+    padding: 2%;    
+}
+.MainLayout>header {
+    grid-column: span 2;
+}
+.MainLayout>#Skills{
+    margin-left :10px;
+    margin-top: 20px;
+}
+
+.MainLayout>#Details{
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.MainLayout, .MainLayout>*{
+    border: 1px solid white;
+}
