@@ -7,6 +7,7 @@ class SingleCarData {
   tzeva_rechev: string | undefined;
   shnat_yitzur: string | undefined;
   tokef_dt: string | undefined;
+  handiCap: boolean | undefined;
 }
 
 export default SingleCarData;

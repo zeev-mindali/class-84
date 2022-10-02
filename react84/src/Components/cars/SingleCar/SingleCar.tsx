@@ -10,6 +10,7 @@ function SingleCar(props:SingleCarData): JSX.Element {
             {props.tzeva_rechev}<br/>
             {props.shnat_yitzur}<br/>
             {props.tokef_dt}<br/>
+            {props.handiCap?"handiCap":"not handicap"}
         </div>
     );
 }

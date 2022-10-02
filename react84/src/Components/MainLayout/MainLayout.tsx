@@ -1,4 +1,6 @@
+import { BrowserRouter } from "react-router-dom";
 import CarLocator from "../cars/CarLocator/CarLocator";
+import Routing from "../cars/routing/routing";
 import Footer from "../Layout/Footer/Footer";
 import Header from "../Layout/Header/Header";
 import Main from "../Layout/Main/Main";
@@ -9,10 +11,12 @@ import "./MainLayout.css";
 function MainLayout(): JSX.Element {
     return (
         <div className="MainLayout">
-			<header><Header/></header>
-            <aside><Menu/></aside>
-            <main><CarLocator/></main>
-            <footer><Footer/></footer>
+            <BrowserRouter>
+                <header><Header/></header>
+                <aside><Menu/></aside>
+                <main><Routing/></main>
+                <footer><Footer/></footer>
+            </BrowserRouter>
         </div>
     );
 }
