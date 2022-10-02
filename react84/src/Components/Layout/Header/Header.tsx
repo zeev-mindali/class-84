@@ -9,7 +9,7 @@ function Header(): JSX.Element {
         const timeRunner = setInterval(()=>{
             const myTime = new Date().toLocaleTimeString();
             //console.log(myTime)
-            setTime(myTime)
+            
         },1000);
     },[]);
     
