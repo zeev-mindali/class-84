@@ -1,0 +1,9 @@
+.MuiForm {
+    width: 300px;
+    text-align: left;
+    margin: 50px auto;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
+}
