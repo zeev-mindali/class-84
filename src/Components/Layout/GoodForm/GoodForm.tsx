@@ -3,6 +3,7 @@ import "./GoodForm.css";
 import { UserCred } from "./userCred";
 
 function GoodForm(): JSX.Element {
+    //npm install react-hook-form
     const {register,handleSubmit,formState:{errors}} = useForm<UserCred>();
 
     const send = (userCred:UserCred)=>{
