@@ -11,6 +11,8 @@ function Menu(): JSX.Element {
             <NavLink to="/offRoad">find off road</NavLink><br/><br/>
             <NavLink to="/handiCap">find handi cap</NavLink><br/><br/>
             <NavLink to="/recall">find recall</NavLink><br/><br/>
+            <NavLink to="/badForm">add new car</NavLink><br/><br/>
+            <NavLink to="/goodForm">add a car like a boss</NavLink>
         </div>
     );
 }
