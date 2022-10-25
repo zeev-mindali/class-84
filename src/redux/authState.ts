@@ -30,7 +30,7 @@ export interface authAction {
 }
 
 //function to handle the state changes (dispatch)
-export function userLogin(token: string) {
+export function userLogin(token: string):authAction {
   return { type: authActionType.UserLogin, payload: token };
 }
 

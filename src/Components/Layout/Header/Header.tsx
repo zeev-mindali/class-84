@@ -6,12 +6,17 @@ import "./Header.css";
 function Header(): JSX.Element {
   const [userTime, setTime] = useState(new Date().toLocaleTimeString());
   const [stam, setStam] = useState(false);
+  const [user, setUser] = useState(store.getState().authState.userName);
   useEffect(() => {
     const timeRunner = setInterval(() => {
       const myTime = new Date().toLocaleTimeString();
       //console.log(myTime)
     }, 1000);
   }, []);
+
+  store.subscribe(() => {
+    setUser(store.getState().authState.userName);
+  });
 
   return (
     <div className="Header">

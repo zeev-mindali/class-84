@@ -5,6 +5,8 @@ import { store } from "../../../redux/store";
 import "./Menu.css";
 
 function Menu(): JSX.Element {
+  // const priceVat = (price:number)=>price*1.17;
+  // const itemPrice = priceVat(100);
   const [stam, setStam] = useState(false);
   const makeLogout = () => {
     console.log("i want to break free!!!!");
