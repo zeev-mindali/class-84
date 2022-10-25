@@ -1,7 +1,18 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { userLogout } from "../../../redux/authState";
+import { store } from "../../../redux/store";
 import "./Menu.css";
 
 function Menu(): JSX.Element {
+  // const priceVat = (price:number)=>price*1.17;
+  // const itemPrice = priceVat(100);
+  const [stam, setStam] = useState(false);
+  const makeLogout = () => {
+    console.log("i want to break free!!!!");
+    store.dispatch(userLogout());
+    setStam(true);
+  };
   return (
     <div className="Menu">
       Menu
@@ -31,6 +42,10 @@ function Menu(): JSX.Element {
       <br />
       <br />
       <NavLink to="/coolForm">add styled form</NavLink>
+      <br />
+      <br />
+      Hello {store.getState().authState.userName},{" "}
+      <button onClick={makeLogout}>Logout</button>
     </div>
   );
 }

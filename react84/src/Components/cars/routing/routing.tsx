@@ -1,8 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import BadForm from "../../Layout/Form/BadForm";
-import Form from "../../Layout/Form/BadForm";
-import GoodForm from "../../Layout/GoodForm/GoodForm";
-import MuiForm from "../../Layout/MuiForm/MuiForm";
+
 import CarLocator from "../CarLocator/CarLocator";
 import Findbike from "../findbike/findbike";
 import FindHandiCap from "../findHandiCap/findHandiCap";
@@ -24,9 +21,7 @@ function Routing(): JSX.Element {
         <Route path="/offRoad" element={<FindOffRoad />} />
         <Route path="/handiCap" element={<FindHandiCap />} />
         <Route path="/recall" element={<FindRecall />} />
-        <Route path="/badForm" element={<BadForm />} />
-        <Route path="/goodForm" element={<GoodForm />} />
-        <Route path="/coolForm" element={<MuiForm />} />
+
         <Route path="*" element={<Page404 />} />
       </Routes>
     </div>
@@ -34,3 +29,9 @@ function Routing(): JSX.Element {
 }
 
 export default Routing;
+
+/*
+  <Route path="/badForm" element={<BadForm />} />
+        <Route path="/goodForm" element={<GoodForm />} />
+        <Route path="/coolForm" element={<MuiForm />} />
+*/
