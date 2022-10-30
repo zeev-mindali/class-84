@@ -16,7 +16,13 @@
 
 //testmode
 function makeTest() {
-    return "{'name':'Leon','moto':'mess with the best and die like the rest'}"
+    return { 'name': 'Leon', 'moto': 'mess with the best and die like the rest' };
+}
+function sayHi(userName: string, age: number) {
+    return {
+        'name': 'Hello ' + userName,
+        'born': 2022 - age
+    }
 }
 
-export default { makeTest, }
+export default { makeTest, sayHi }

@@ -11,3 +11,11 @@ change the script inside package.json to run our application with type-script
 
 
 npm install to install all our's modules
+
+create a file named tsconfig.json:
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "esModuleInterop": true
+    }
+}
