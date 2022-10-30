@@ -1,5 +1,6 @@
 for creating our project we will use the command:
 npm init
+npm install ts-node (for working with type script)
 dependencies -> final project after build      (User)
 npm install [package name]
 devDependencies -> only for us, the developers (Winner)
@@ -7,3 +8,6 @@ npm install --save-dev [package name]
 
 
 change the script inside package.json to run our application with type-script
+
+
+npm install to install all our's modules
