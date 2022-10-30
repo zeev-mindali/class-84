@@ -1,0 +1,7 @@
+to run node application
+node [application name] => node firstApp.js
+
+where is package.json ???????
+to create package.json, we need to initialize the system
+
+npm init

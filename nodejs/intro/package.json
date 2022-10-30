@@ -1,0 +1,23 @@
+{
+    "name": "class84",
+    "version": "1.0.0",
+    "description": "demo for class 84 (because Tirza was late)",
+    "main": "firstApp.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node secondApp.js"
+    },
+    "keywords": [
+        "class",
+        "84",
+        "rom",
+        "node",
+        "js",
+        "ts"
+    ],
+    "author": "zeev mindali",
+    "license": "ISC",
+    "dependencies": {
+        "levenshtein": "^1.0.5"
+    }
+}

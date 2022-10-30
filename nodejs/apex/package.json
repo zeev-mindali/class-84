@@ -1,0 +1,15 @@
+{
+  "name": "apex",
+  "version": "1.0.0",
+  "description": "leon the queen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "zeev mindali",
+  "license": "ISC",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}
