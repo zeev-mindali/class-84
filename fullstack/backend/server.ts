@@ -4,6 +4,8 @@ import cors from "cors";
 import controller from "./Routes/controller";
 import routeNotFound from "./middleware/route-not-found";
 import catchAll from "./middleware/catch-all";
+import sumNotFoundError from "./middleware/sum-not-found";
+
 
 const server = express();
 //handle cors
@@ -19,6 +21,7 @@ server.use("/", controller);
 
 //show all the error messages
 server.use("*", routeNotFound);
+server.use("*", sumNotFoundError);
 //catch all errors and show them to the user with the response message
 server.use(catchAll);
 server.listen(config.port, () => {

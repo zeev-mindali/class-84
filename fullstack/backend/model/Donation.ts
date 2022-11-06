@@ -75,5 +75,25 @@ donationList.push(
 const deleteME = (id: number) => {
   donationList = donationList.filter((item) => item.getID() !== id);
 };
-export { donationList, deleteME };
+
+const minValue = () => {
+  let min = Number.MAX_VALUE;
+  donationList.map((item) => {
+    if (item.getSum() < min) {
+      min = item.getSum();
+    }
+  });
+  return min;
+};
+
+const maxValue = () => {
+  let max = Number.MIN_VALUE;
+  donationList.map((item) => {
+    if (item.getSum() > max) {
+      max = item.getSum();
+    }
+  });
+  return max;
+};
+export { donationList, deleteME, maxValue, minValue };
 export default Donation;
