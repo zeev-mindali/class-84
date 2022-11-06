@@ -1,6 +1,6 @@
 //return data in promise (pending,full field,rejected)
 
-import { donationList } from "../model/Donation";
+import Donation, { donationList } from "../model/Donation";
 
 //get all payments
 
@@ -45,6 +45,13 @@ function getDonationByName(userName: string) {
   );
 }
 
+function addDonation(newDonation: Donation) {
+  //const myDonation = new Donation();
+  //myDonation.getDonation(newDonation);
+  //donationList.push(myDonation);
+  donationList.push(newDonation);
+}
+
 export default {
   makeTest,
   sayHi,
@@ -52,4 +59,5 @@ export default {
   getSingleDonation,
   getDonationRange,
   getDonationByName,
+  addDonation,
 };

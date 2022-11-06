@@ -28,6 +28,17 @@ class Donation {
     this.memo = memo;
   }
 
+  // public getDonation(newDonation: Donation) {
+  //   this.id = newDonation.id;
+  //   this.name = newDonation.name;
+  //   this.family = newDonation.family;
+  //   this.sum = newDonation.sum;
+  //   this.auth_code = newDonation.auth_code;
+  //   this.cancel_code = newDonation.cancel_code;
+  //   this.payment_code = newDonation.payment_code;
+  //   this.memo = newDonation.memo;
+  // }
+
   public getID() {
     return this.id;
   }

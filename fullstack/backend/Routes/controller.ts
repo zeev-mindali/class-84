@@ -48,15 +48,30 @@ router.get(
   }
 );
 
-router.get("/dontaionRange/:from/:to",(request: Request, response: Response, next: NextFunction)=>{
+router.get(
+  "/dontaionRange/:from/:to",
+  (request: Request, response: Response, next: NextFunction) => {
     const from = +request.params.from;
     const to = +request.params.to;
-    response.status(200).json(logic.getDonationRange(from,to));
-})
+    response.status(200).json(logic.getDonationRange(from, to));
+  }
+);
 
-router.get("/donationByName/:name", (request: Request, response: Response, next: NextFunction)=>{
+router.get(
+  "/donationByName/:name",
+  (request: Request, response: Response, next: NextFunction) => {
     const userName = request.params.name;
-    response.status(200).json(logic.getDonationByName(userName))
-});
+    response.status(200).json(logic.getDonationByName(userName));
+  }
+);
+
+//add donation.....
+router.post(
+  "/addDonation",
+  (request: Request, response: Response, next: NextFunction) => {
+    const newDonation = request.body;
+    response.status(201).json(logic.addDonation(newDonation))
+  }
+);
 
 export default router;
