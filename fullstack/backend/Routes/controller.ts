@@ -70,7 +70,16 @@ router.post(
   "/addDonation",
   (request: Request, response: Response, next: NextFunction) => {
     const newDonation = request.body;
-    response.status(201).json(logic.addDonation(newDonation))
+    response.status(201).json(logic.addDonation(newDonation));
+  }
+);
+
+//delete donation
+router.delete(
+  "/delete/:id",
+  (request: Request, response: Response, next: NextFunction) => {
+    const id = +request.params.id;
+    response.status(204).json(logic.deleteID(id));
   }
 );
 

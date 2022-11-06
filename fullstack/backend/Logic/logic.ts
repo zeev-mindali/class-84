@@ -1,6 +1,6 @@
 //return data in promise (pending,full field,rejected)
 
-import Donation, { donationList } from "../model/Donation";
+import Donation, { deleteME, donationList } from "../model/Donation";
 
 //get all payments
 
@@ -52,6 +52,11 @@ function addDonation(newDonation: Donation) {
   donationList.push(newDonation);
 }
 
+function deleteID(id: number) {
+  //donationList = donationList.filter((item) => item.getID() !== id); will not work becuase it's an import
+  deleteME(id);
+}
+
 export default {
   makeTest,
   sayHi,
@@ -60,4 +65,5 @@ export default {
   getDonationRange,
   getDonationByName,
   addDonation,
+  deleteID,
 };

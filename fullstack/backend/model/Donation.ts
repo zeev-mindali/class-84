@@ -72,5 +72,8 @@ donationList.push(
   new Donation(6, "Vova", "bla bla", 18, "3kjfhkj3", "", 1, "הקמצן")
 );
 
-export { donationList };
+const deleteME = (id: number) => {
+  donationList = donationList.filter((item) => item.getID() !== id);
+};
+export { donationList, deleteME };
 export default Donation;
