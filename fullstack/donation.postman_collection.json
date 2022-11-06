@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "26fe97ab-5a2e-4a71-a0e4-840c78252109",
+		"name": "donation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"zeev1\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "donation list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3100/donationList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"donationList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "donationPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3100/donationPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"donationPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "singleDonation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3100/donation/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"donation",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "donation by range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3100/dontaionRange/18/1800",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"dontaionRange",
+						"18",
+						"1800"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "donation by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3100/donationByName/v",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"donationByName",
+						"v"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new donation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 8,\r\n        \"name\": \"Eliran\",\r\n        \"family\": \"shakaruf\",\r\n        \"sum\": 18000,\r\n        \"auth_code\": \"3d23d23d\",\r\n        \"cancel_code\": \"\",\r\n        \"payment_code\": 1,\r\n        \"memo\": \"kill leon\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/addDonation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"addDonation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete donation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3100/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
