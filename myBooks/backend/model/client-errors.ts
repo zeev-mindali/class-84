@@ -1,40 +1,29 @@
-import { maxValue, minValue } from "./Donation";
-
 export class ClientError {
-  public status: number;
-  public message: string;
+    public status: number;
+    public message: string;
 
-  constructor(status: number, message: string) {
-    this.status = status;
-    this.message = message;
-  }
+    constructor(status: number, message: string) {
+        this.status = status;
+        this.message = message;
+    }
 }
 
 export class IdNotFoundError extends ClientError {
-  public constructor(id: number) {
-    super(404, `id ${id} not found`);
-    //this.status = 404;
-    //this.message = `id ${id} not found`;
-  }
+    public constructor(id: number) {
+        super(404, `id ${id} not found`);
+        //this.status = 404;
+        //this.message = `id ${id} not found`;
+    }
 }
 
 export class RouteNotFoundError extends ClientError {
-  public constructor(route: string) {
-    super(404, `{"status":"404","msg":"route ${route} not found"}`);
-  }
-}
-
-export class SumNotFoundError extends ClientError {
-  public constructor() {
-    super(
-      406,
-      `{"status":"406","msg":"price not in range","min":"minimum value ${minValue()}","max":"maximum value ${maxValue()}"`
-    );
-  }
+    public constructor(route: string) {
+        super(404, `{"status":"404","msg":"route ${route} not found"}`);
+    }
 }
 
 export class ValidationError extends ClientError {
-  public constructor(message: string) {
-    super(400, message);
-  }
+    public constructor(message: string) {
+        super(400, message);
+    }
 }

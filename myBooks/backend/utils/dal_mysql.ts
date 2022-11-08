@@ -27,3 +27,5 @@ const execute = (sql: string): Promise<any> => {
         })
     });
 }
+
+export default { execute }
