@@ -1,10 +1,9 @@
 import express from "express";
-import config from "./config";
+import config from "./utils/config";
 import cors from "cors";
 import controller from "./Routes/controller";
 import routeNotFound from "./middleware/route-not-found";
 import catchAll from "./middleware/catch-all";
-import sumNotFoundError from "./middleware/sum-not-found";
 
 
 const server = express();
@@ -25,5 +24,5 @@ server.use("*", sumNotFoundError);
 //catch all errors and show them to the user with the response message
 server.use(catchAll);
 server.listen(config.port, () => {
-  console.log(`listening on http://localhost:${config.port}`);
+    console.log(`listening on http://localhost:${config.port}`);
 });

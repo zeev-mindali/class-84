@@ -1,0 +1,43 @@
+//create db
+CREATE SCHEMA `books` ;
+
+//create table named books
+CREATE TABLE IF NOT EXISTS `books` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `summary` VARCHAR(255) NULL,
+  `genre` INT NULL,
+  `price` DECIMAL(2) NULL,
+  `qty` INT NULL,
+  PRIMARY KEY (`id`));
+
+CRUD -> Create Read Update Delete
+
+  //insert data to TABLE (Create)
+  INSERT 
+  INTO `books` (`name`, `summary`, `genre`, `price`, `qty`) 
+  VALUES ('bibi', 'true lies about bibi life', '1', '10', '1000');
+
+//read data from table (Read)
+SELECT * FROM books
+select count(*) as total from books
+
+//read data with condition
+SELECT * FROM books WHERE genre=4
+SELECT * FROM books WHERE price<=100
+SELECT * FROM books WHERE qty>=2 AND qty<=100
+SELECT * FROM books ORDER BY qty desc
+SELECT * FROM books GROUP BY genre
+
+//Update record
+UPDATE books SET qty=10 WHERE id=2;
+UPDATE books SET price=50 WHERE (genre=4 or genre=1) AND id>0
+
+//Delete row
+DELETE FROM books WHERE id=2
+
+//what about joining tables ?????
+
+
+
+
