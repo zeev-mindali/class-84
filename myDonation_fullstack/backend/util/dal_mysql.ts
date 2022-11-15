@@ -8,7 +8,8 @@ const connection = mysql.createPool({
     host: config.mySQLhost,
     user: config.mySQLUser,
     password: config.mySQLPassword,
-    database: config.mySQLdb
+    database: config.mySQLdb,
+    port: config.mySQLport
 });
 
 console.log("we are connected to the DB");
