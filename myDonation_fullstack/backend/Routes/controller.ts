@@ -4,6 +4,14 @@ import Urls from "../util/Urls";
 
 const router = express.Router();
 
+//init
+
+router.get("/init",async (request: Request, response: Response, next: NextFunction) => {
+    await logic.createDonationTable();
+    await logic.createPaymentTable();
+    response.status(201).json('{"msg":"tables was created successfully"}');
+} )
+
 //GET->All Donations
 router.get(Urls.getAllDonations, async (request: Request, response: Response, next: NextFunction) => {
     response.status(200).json(await logic.getAllDonations());

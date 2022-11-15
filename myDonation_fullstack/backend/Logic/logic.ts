@@ -10,6 +10,26 @@ const getAllPayment = async (): Promise<Payment[]> => {
     return response;
 }
 
+const createPriviliages = async():Promise<void> =>{
+    const sql = `
+    ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY '12345678';
+    flush privileges;
+    `;
+    const response = await dal_mysql.execute(sql);
+    return response;
+}
+
+const createDonationTable = async():Promise<void>=>{
+    const sql = "CREATE TABLE IF NOT EXISTS `myDonation`.`donation` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(45) NOT NULL , `sum` INT NOT NULL , `auth_code` VARCHAR(45) NOT NULL , `cancel_code` VARCHAR(45) NOT NULL , `payment_code` INT NOT NULL , `memo` VARCHAR(45) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+    const response = await dal_mysql.execute(sql);
+    return response;
+}
+
+const createPaymentTable = async():Promise<void>=>{
+    const sql = "CREATE TABLE IF NOT EXISTS `myDonation`.`payment` (`id` INT NOT NULL AUTO_INCREMENT , `payment` VARCHAR(45) NOT NULL , `auth_code` VARCHAR(45) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+    const response = await dal_mysql.execute(sql);
+    return response;
+}
 
 const getAllDonations = async (): Promise<Donation[]> => {
     const sql = `
@@ -68,5 +88,8 @@ export default {
     getSingleDonation,
     deleteDonation,
     addDonation,
-    updateDonation
+    updateDonation,
+    createPriviliages,
+    createDonationTable,
+    createPaymentTable,
 }
