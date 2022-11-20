@@ -16,3 +16,11 @@
 
 4. add start script to package json, for running our amazing server
    "start" : "nodemon --exec ts-node "
+
+5. create tsconfig.json:
+    {
+        "compilerOptions": {
+            "target": "ES5",
+            "esModuleInterop": true
+        }
+    }
