@@ -24,3 +24,8 @@
             "esModuleInterop": true
         }
     }
+
+
+6. fix mysql authentication error :
+    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345678';
+    flush privileges;

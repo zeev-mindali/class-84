@@ -4,4 +4,8 @@ class Config{
     public mysqlUser = "root";
     public mysqlPassword = "12345678";
     public mysqlDatabase = "vet";
+    public mysqlPort = 3306;
 }
+
+const config = new Config();
+export default config;
