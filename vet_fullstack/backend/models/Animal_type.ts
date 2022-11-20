@@ -1,6 +1,6 @@
 class Animal_type {
-    id:number;
-    animal_type:string;
+    public id:number;
+    public animal_type:string;
 }
 
 export default Animal_type;

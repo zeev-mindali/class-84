@@ -13,14 +13,16 @@ router_medicine.get("/all", async (request:Request, response:Response, next:Next
 //get medicine by id
 router_medicine.get("/:id",async (request:Request, response:Response, next:NextFunction)=>{
     const medId = +request.params.id;
+    response.status(200).json(await medicine_logic.getMedicineById(medId))
 
 });
 
 
 //post add new medicine name
-router_medicine.post("/", async (request:Request, response:Response, next:NextFunction)=>{
-    const medicine = request.body;
-
+router_medicine.delete("/:id", async (request:Request, response:Response, next:NextFunction)=>{
+    const medicine = +request.params.id;
+    await medicine_logic.deleteById(medicine);
+    response.status(204).send("was deleted successfully");
 })
 
 

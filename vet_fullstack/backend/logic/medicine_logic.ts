@@ -8,7 +8,19 @@ const getAllMedicine = async():Promise<Medicane_name[]>=>{
     return medicine_list;
 }
 
+const getMedicineById = async(id:number):Promise<Medicane_name>=>{
+    const sql = `SELECT * FROM medicane_name WHERE id=${id}`;
+   return await dal.execute(sql);
+    
+}
+
+const deleteById = async(id:number):Promise<void>=>{
+    const sql = `DELETE FROM medicane_name WHERE id=${id}`;
+    return await dal.execute(sql);
+}
 
 export default {
     getAllMedicine,
+    getMedicineById,
+    deleteById,
 }
