@@ -3,11 +3,17 @@ import dal from "../utils/dal";
 import Animal from "../models/Animal";
 
 const getAllAnimals = async (): Promise<Animal[]> => {
+    // const sql = `
+    //     SELECT animals.*, animal_type.animal_type, owner.*   
+    //     FROM animals 
+    //     JOIN animal_type ON animals.type = animal_type.id
+    //     JOIN owner ON animals.owner=owner.id`;
+    //const sql = "SELECT * FROM animals";
     const sql = `
-        SELECT animals.*, animal_type.animal_type, owner.*   
+        SELECT animals.*, animal_type.animal_type as type  
         FROM animals 
         JOIN animal_type ON animals.type = animal_type.id
-        JOIN owner ON animals.owner=owner.id`;
+        `;
     const animal_list = await dal.execute(sql);
     return animal_list;
 }
