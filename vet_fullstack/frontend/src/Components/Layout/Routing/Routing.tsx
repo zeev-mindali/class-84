@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import AddAnimal from "../../Pages/AddAnimal/AddAnimal";
 import AnimalTypes from "../../Pages/AnimalTypes/AnimalTypes";
 import Home from "../../Pages/Home/Home";
 import ListAnimals from "../../Pages/ListAnimals/ListAnimals";
@@ -17,7 +18,8 @@ function Routing(): JSX.Element {
                 <Route path="/ListCustomers" element={<ListCustomers/>}/>
                 <Route path="/AnimalTypes" element={<AnimalTypes/>}/>
                 <Route path="/Medicines" element={<Medicines/>}/>
-                <Route path="/Login" element={<Login/>}/>                
+                <Route path="/Login" element={<Login/>}/>  
+                <Route path="/AddAnimal" element={<AddAnimal/>}/>
                 <Route path="/" element={<Home/>}/>
                 <Route path="*" element={<Page404/>}/>
             </Routes>

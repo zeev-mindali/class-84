@@ -4,10 +4,11 @@ import "./ListAnimals.css";
 import axios from "axios";
 import ownerPng from "../../../assets/owner.png";
 import editor from "../../../assets/pencil.png";
+import { useNavigate } from "react-router-dom";
 
 function ListAnimals(): JSX.Element {
     const [animals, setAnimals] = useState<AnimalModel[]>([]);
-
+    const navigate = useNavigate();
     useEffect(() => {
         const url = "http://localhost:3001/api/animal";
         axios.get(url)
@@ -52,7 +53,7 @@ function ListAnimals(): JSX.Element {
                 </tbody>
             </table>
             <br/><br/>
-            <input type="button" value="Add new Animal"/>
+            <input type="button" value="Add new Animal" onClick={()=>navigate("/AddAnimal")}/>
         </div>
     );
 }
