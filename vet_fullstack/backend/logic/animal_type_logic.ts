@@ -9,13 +9,13 @@ const getAllAnimalTypes = async():Promise<Animal_type[]>=>{
 }
 
 const getAnimalTypeById = async(id:number):Promise<Animal_type>=>{
-    const sql = `SELECT * FROM animal_type WHERE id=${id}`;
+    const sql = `SELECT * FROM animal_type WHERE id=${+id}`;
    return await dal.execute(sql);
     
 }
 
 const deleteAnimalTypeById = async(id:number):Promise<void>=>{
-    const sql = `DELETE FROM animal_type WHERE id=${id}`;
+    const sql = `DELETE FROM animal_type WHERE id=${+id}`;
     return await dal.execute(sql);
 }
 

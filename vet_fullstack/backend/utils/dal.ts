@@ -13,7 +13,7 @@ const connection = mysql.createPool({
 const execute = (sql:string):Promise<any>=>{
     return new Promise<any>((resolve,reject)=>{
         //execute the sql to mysql:
-        connection.query(sql, (err,result)=>{
+        connection.query(sql,  (err,result)=>{
             //if there is an error, reject and send promise, rejected
             if (err){
                 reject(err);
