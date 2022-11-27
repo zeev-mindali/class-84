@@ -14,7 +14,7 @@ function App() {
         switch (item.name){
             case "switch":
             case "boiler":
-                return <Switch name={item.name} value={item.value}/>
+                return <Switch name={item.name} value={item.value} id={item.id}/>
 
             case "shutter":
                 return <Shutter name={item.name} value={item.value}/>

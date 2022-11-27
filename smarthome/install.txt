@@ -1,0 +1,32 @@
+backend 
+=============
+device:
+id (pk, ai)
+name varchar
+node_id number
+minimum_value 
+maximum_value
+value int
+
+secnario:
+id (pk, ai)
+device_type number
+start_value number
+end_Value number
+start_date date
+end_date date
+
+rest:
+============
+get all device types, get device type by id, add new device, change device value
+get all secnario, get scenario by id, add new scenario, delete secnario
+
+front end
+=================
+add device type
+add new secnario
+display all devices with mangage
+
+switch/boiler/light -> values 0,255
+shutter -> 0-255
+ac -> 16->34
