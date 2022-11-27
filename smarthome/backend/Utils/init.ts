@@ -1,0 +1,2 @@
+export const create_device_type = "CREATE TABLE IF NOT EXISTS device_type (id INT NOT NULL AUTO_INCREMENT,name VARCHAR(45) NULL,node_id INT NULL,max_value INT NULL,min_value INT NULL, value INT NULL, PRIMARY KEY (id));"
+export const create_secnario = "CREATE TABLE IF NOT EXISTS secnario (id INT NOT NULL AUTO_INCREMENT,device_type INT NULL,name VARCHAR(45) NULL,start_value INT NULL,end_value INT NULL, start_date DATETIME NULL,end_date DATETIME NULL,PRIMARY KEY (id));";

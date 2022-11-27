@@ -1,0 +1,21 @@
+html, body, #root{
+    margin:0;
+    padding: 0;
+    height: 100%;
+    width:100%;
+    text-align: center;
+    background-image: linear-gradient(black,yellow);
+}
+
+.Box {
+    display: inline-block   ;
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 15px;
+    height: 22vh;
+    width: 22vh;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px black;
+}
