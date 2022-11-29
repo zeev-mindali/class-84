@@ -24,8 +24,7 @@ function Main(): JSX.Element {
                         <th>first name</th>
                         <th>last name</th>
                         <th>tel</th>
-                        <th>grade</th>
-                        <th>edit</th>
+                        <th>grade</th>                       
                         <th>delete</th>
                     </tr>
                 </thead>
@@ -38,9 +37,9 @@ function Main(): JSX.Element {
                             <td>{item.last_name}</td>
                             <td>{item.tel}</td>
                             <td>{item.avgGrade}</td>
-                            <td><button onClick={(args)=>{
-                                navigate(`add/${item.id}`)
-                            }}>✍</button></td>
+
+
+                            
                             <td><button onClick={()=>{
                                 axios.delete(`http://localhost:3001/student/${item.id}`);
                                 setStudents(students.filter(singleStudent=>singleStudent.id !== item.id));

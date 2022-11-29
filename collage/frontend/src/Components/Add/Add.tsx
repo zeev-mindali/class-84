@@ -34,7 +34,6 @@ function Add(): JSX.Element {
             } 
             if (id>0){
                 newStudent.id = id;
-                newStudent.first_name = newStudent.first_name?newStudent.first_name:student?.first_name;
                 await axios.put("http://localhost:3001/student/",newStudent)
                 .then(res=>navigate("/"));
             }
