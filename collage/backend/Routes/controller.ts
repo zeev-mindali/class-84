@@ -6,6 +6,11 @@ import studentLogic from '../Logic/studentLogic';
 // generic router 
 const router = express.Router();
 
+router.get("/courses", async (request: Request, response: Response, next: NextFunction) => {
+    console.log("rest test");
+    response.status(200).json(await studentLogic.getAllCourses());
+})
+
 router.get("/", async (request: Request, response: Response, next: NextFunction) => {
   response.status(200).json("controller working");
 })
@@ -38,5 +43,6 @@ router.put("/", async (request: Request, response: Response, next: NextFunction)
   const body = request.body;
   response.status(201).json( await studentLogic.updateStudent(body));
 })
+
 
 export default router;

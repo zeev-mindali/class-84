@@ -1,7 +1,7 @@
 import dal from "../Utils/dal_mysql"
 import { OkPacket } from "mysql";
 import Student from "../Models/student";
-
+import Course from "../Models/course";
 //add student
 const addStudent = async (student: Student): Promise<Student> => {
     // command line for the DB
@@ -71,11 +71,18 @@ const getSingleStudent = async (id:number): Promise<Student> => {
     return student;
 }
 
+const getAllCourses = async():Promise<Course[]> =>{
+    const sql = "SELECT * FROM course";
+    const courses = await dal.execute(sql);
+    return courses;
+}
+
 export default{
     addStudent,
     updateStudent,
     deleteStudent,
     getAllStudents,
-    getSingleStudent
+    getSingleStudent,
+    getAllCourses,
 }
 
