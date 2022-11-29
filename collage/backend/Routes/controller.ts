@@ -1,6 +1,5 @@
 // All the routes that connect the the DB and client.
 import express, {NextFunction, Request, Response} from 'express';
-import { useParams } from 'react-router-dom';
 import studentLogic from '../Logic/studentLogic';
 
 
