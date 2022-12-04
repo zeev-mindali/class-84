@@ -5,6 +5,9 @@ class Student{
     last_name:string="";
     tel:string="";
     avgGrade:number=0;
+    createdAt:Date = new Date();
+    isTalent:Boolean = false;
+    userPhoto:any | undefined;
 }
 
 export default Student;

@@ -24,8 +24,10 @@ function Main(): JSX.Element {
                         <th>first name</th>
                         <th>last name</th>
                         <th>tel</th>
-                        <th>grade</th>                       
-                        <th>delete</th>
+                        <th>grade</th>  
+                        <th>Talent</th>
+                        <th>created At</th>                     
+                        <th>delete</th>                      
                     </tr>
                 </thead>
                 <tbody>
@@ -37,9 +39,13 @@ function Main(): JSX.Element {
                             <td>{item.last_name}</td>
                             <td>{item.tel}</td>
                             <td>{item.avgGrade}</td>
-
-
-                            
+                            <td>
+                                {item.avgGrade>=90?
+                                <input type="checkbox" checked disabled/>:
+                                <input type="checkbox" disabled/>
+                                }
+                            </td>
+                            <td>{new Date(item.createdAt).toLocaleString()}</td>
                             <td><button onClick={()=>{
                                 axios.delete(`http://localhost:3001/student/${item.id}`);
                                 setStudents(students.filter(singleStudent=>singleStudent.id !== item.id));

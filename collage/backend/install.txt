@@ -1,4 +1,4 @@
-npm install express body-parser cors express-fileupload morgan lodash
+npm install express body-parser cors @types/express-fileupload @types/morgan morgan lodash @types/lodash
 
 
 express

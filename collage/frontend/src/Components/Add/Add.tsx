@@ -29,6 +29,7 @@ function Add(): JSX.Element {
     const send = async (newStudent: Student) => {
         try {
             if (id===0){
+                //newStudent.createdAt = new Date().toISOString().slice(0, 19).replace('T', ' ');
                 await axios.post("http://localhost:3001/student/add",newStudent)
                 .then(res=>navigate("/"));
             } 
@@ -66,6 +67,9 @@ function Add(): JSX.Element {
 
                     <label>Avg grade:</label>
                     <input type="number" defaultValue={student?.avgGrade} {...register("avgGrade")}/>
+
+                    <label>Date:</label>
+                    <input type="datetime-local" {...register("createdAt")}/>
 
                     <input type="submit" value="save student" style={{ height: 50, backgroundColor: "lightgreen", borderRadius: 20 }} />
                 </form>
