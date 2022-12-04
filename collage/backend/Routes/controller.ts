@@ -29,6 +29,7 @@ router.get("/:id", async (request: Request, response: Response, next: NextFuncti
 // sends information to DB
 router.post("/add", async (request: Request, response: Response, next: NextFunction) => {
   const body = request.body;
+  console.log(request.body);
   response.status(201).json( await studentLogic.addStudent(body))
 })
 

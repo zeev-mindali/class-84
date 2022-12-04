@@ -12,7 +12,9 @@ const addStudent = async (student: Student): Promise<Student> => {
     '${student.first_name}',
     '${student.last_name}',
     '${student.tel}',
-    ${student.avgGrade}
+    ${student.avgGrade},
+    '${student.createdAt}',
+    0
     )`;
 
     const response: OkPacket = await dal.execute(sql);

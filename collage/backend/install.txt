@@ -1,0 +1,28 @@
+npm install express body-parser cors express-fileupload morgan lodash
+
+
+express
+=======
+Popular web framework built on tope of node.js , we shall use it for development REST API.
+
+body-parser
+============
+node.js request body parsing middleware parses the incoming request body before we will handle
+and makes it available under the 'req.body' property. in short, simplifies incoming request
+
+cors
+======
+another express middleware for enabling CORS (Cross Origin Resource sharing) requests.
+
+express-fileupload
+====================
+simple express middleware for upload files, it parses 'multipart/from-data' requests,
+extracts the files if available, and makes them available under the 'req.files' property.
+
+morgan
+===========
+node.js middleware for logging HTTP requests.
+
+lodash
+========
+a javascript library that provides utility functiosn for arrays, numbers, objects, strings, etc...
