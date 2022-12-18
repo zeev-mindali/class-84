@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+</head>
+<body>
+    <form action="save.php" method="post">
+        <label for="fullName">Fulle Name</label>
+        <input type="text" id="fullName" name="fullName"/>
+        <br/><br/>
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+        <br/><br/>
+        <input type="submit" value="ok"/>
+        <?php
+
+        //take parameters
+        $fullName = $_POST["fullName"];
+        $message = $_POST["message"];
+    
+        //save them to text file.
+        $data2save = "full name: $fullName \nMessage: $message\n";
+        file_put_contents("Details.txt",$data2save, FILE_APPEND);
+    
+        //display on screen
+        echo "Full name: $fullName<br/>";
+        echo "Message: $message";
+    
+        //redirect to thank you page
+        header("Location: thankyou.html");
+    
+        ?>
+    </form>
+</body>
+</html>
