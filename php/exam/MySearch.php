@@ -12,13 +12,13 @@
         <h1>PHP search</h1>
         <label> In your mother in law, what you want?</label>
         <form method="get" action="">
-            <input name="results"/>
+            <input type="text" name="results"/>
             <input type="submit"/>
         </form>
         <?php            
             if (isset($_GET['results']) && $_GET['result'] != ""){
                 echo "<br/>tour search result array:<hr/><br/>";
-                $url = "https://www.googleapis.com/customsearch/v1?key='dfgdfgdfgdfg'&q=".str_replace(' ','%20',$_get['results']);
+                $url = "https://www.google.co.il/search?q=".str_replace(' ','%20',$_get['results']);
 
                 //zeev mindali->zeev%20mindali
 
@@ -38,8 +38,7 @@
                 //now precess the json string
                 $json = json_decode($body);
 
-                //print out the arry
-                print_r($json);
+                //print out the arry               
                 foreach ($json as $item){
                     echo "$item<br/>";
                 }
