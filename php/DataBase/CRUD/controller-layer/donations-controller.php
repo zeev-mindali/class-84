@@ -1,6 +1,6 @@
 <?php
 
-require_once '../bussniess-logic/donation-logic.php';
+require_once '../business-logic/donation-logic.php';
 
 $command = $_REQUEST["command"];
 //(name,family,tel,sum,payment_code,memo)
