@@ -1,0 +1,19 @@
+body{
+    background-color: lightblue;
+}
+
+table{
+    margin: auto;
+}
+
+table, th, td {
+        border: 1px solid blue;
+}
+
+th,td{
+    padding: 5px;
+}
+
+tr:nth-of-type(even){
+    background-color: lightgreen;
+}
