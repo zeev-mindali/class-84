@@ -43,6 +43,8 @@
                 $myResult = utf8_decode($body);
                 //show the result
                 echo $myResult;
+            //}
+
         ?>
 </body>
 </html>
