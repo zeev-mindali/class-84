@@ -7,7 +7,7 @@ class Student{
     avgGrade:number=0;
     createdAt:Date = new Date();
     isTalent:Boolean = false;
-    userPhoto:any | undefined;
+    userPhoto:any ="";
 }
 
 export default Student;
