@@ -108,7 +108,7 @@ router.post("/login",async (request: Request, response: Response, next: NextFunc
         //check the token .......
         try{
             if (await checkJWT(request.headers.authorization)){
-                response.status(202).json(`Welcome my Lady , Tirza!!!`);
+                response.status(202).json(`Welcome my husband shmuel (Tirza)`);
             } else {
                 response.status(401).json("unauthorized user...");
             }
@@ -126,7 +126,7 @@ router.post("/login",async (request: Request, response: Response, next: NextFunc
         //add token to the system...
         response.set("Authorization",`Bearer ${token}`);
         console.log("user name:",getUserNameFromJWT(token));
-        response.status(202).json(`Welcome my Lord , Gal!!!`);
+        response.status(202).json(`Welcome my husband shmuel (Tirza)`);
     } else {
         response.status(401).send("You are not authorized!!!!")
     }

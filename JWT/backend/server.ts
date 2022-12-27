@@ -16,7 +16,17 @@ const server = express();
 const currentPort = config.port;
 dal_mysql.execute(createStudents);
 dal_mysql.execute(createClasses);
-server.use(cors());
+
+//cors option
+var corsOptions = {
+    "origin": "*", //expose to all server around the world
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE", //expose which methods are allowed
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204,
+    "exposedHeaders" : "Authorization" //expose the Authorization header
+  }
+
+  server.use(cors(corsOptions));
 server.use(express.json());
 server.use(express.static('user_image'));
 //enable file uploading , and create a path for the files if it not exists
