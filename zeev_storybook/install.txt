@@ -1,0 +1,16 @@
+to expose src=>index.tsx
+
+tsdx  -> npx tsdx create perso-components
+npm start
+npm run storybook
+
+https://github.com/zeev-mindali/ts-react
+
+mdx-> add mdx to main.js
+expose documantion -> build-storybook
+
+
+show install of accessibility : storybook.js.org/addons
+storybook.js.org/addons/@storybook/addon-a11y
+npm install -D @storybook/addon-a11y
+change the main....
